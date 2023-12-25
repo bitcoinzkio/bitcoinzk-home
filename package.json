@@ -11,7 +11,11 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "next": "14.0.4",
+    "classnames": "^2.3.2",
+    "react-icons": "^4.11.0",
+    "react-use": "^17.4.0",
+    "@formkit/auto-animate": "^0.8.1"
   },
   "devDependencies": {
     "typescript": "^5",
