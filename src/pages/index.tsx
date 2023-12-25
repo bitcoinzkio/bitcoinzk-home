@@ -34,7 +34,7 @@ export default function Home() {
           <div className=" flex flex-row items-center ">
             <div>
               <span className=" text-[76px] mo:text-[36px]">
-                REVOLUTIONIZING BITCOIN'S LAYER 2
+                REVOLUTIONIZING BITCOIN&apos;S LAYER 2
               </span>
               <div className="gap-[30px] flex mt-[100px]">
                 <button className=" bg-white w-[208px] h-[57px] text-[20px] font-bold text-[#000000] ">
@@ -46,7 +46,8 @@ export default function Home() {
               </div>
               <div className=" mt-[35px] text-[20px]  w-full">
                 BitViva responds to the growing need for a decentralized Layer 2
-                network, offering enhanced capabilities for Bitcoin's ecosystem.
+                network, offering enhanced capabilities for Bitcoin&apos;s
+                ecosystem.
               </div>
             </div>
             <img src={"./earth.png"} alt="" />
@@ -60,9 +61,12 @@ export default function Home() {
               Native, seamless and compatible
             </span>
             <div className="grid grid-cols-2 gap-[118px] mt-[120px] ">
-              {content.map((e) => {
+              {content.map((e, i) => {
                 return (
-                  <div className="flex gap-10 items-center ">
+                  <div
+                    className="flex gap-10 items-center  "
+                    key={`content_${i}`}
+                  >
                     <img src={e.icon} />
                     <div className=" flex flex-col ">
                       <span> {e.title}</span>
