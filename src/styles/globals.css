@@ -20,3 +20,47 @@ body {
   color: rgb(var(--foreground-rgb));
   background: white
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: left;
+  height: 62px;
+  font-weight: 300;
+
+}
+
+
+tr.no-border th {
+  border: none;
+}
+
+tr.title td {
+  width: 100px;
+}
+
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+
+th:first-child, td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+
+
+.font1{
+  font-weight: 700;
+}
+
+

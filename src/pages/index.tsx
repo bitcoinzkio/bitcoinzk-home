@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
+import Image from "next/image";
 export default function Home() {
+  const currentYear = new Date().getFullYear();
   const content = [
     {
       icon: "./btc.png",
@@ -29,13 +31,14 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className=" bg-[url(/topBg.png)] w-full h-[824px]">
-        <div className="w-container mx-auto flex mo:w-full md:w-full md:px-[30px] mo:px-[30px] justify-center">
-          <div className=" flex flex-row items-center ">
+      <div className=" bg-[url(/headerBgI.svg)] w-full h-[824px] md:h-[624px] bg-center">
+        <div className="w-container mx-auto flex mo:w-full md:w-full md:px-[30px] mo:px-[30px] ">
+          <div className=" flex flex-row items-center mt-[120px] ">
             <div>
-              <span className=" text-[76px] mo:text-[36px]">
-                REVOLUTIONIZING BITCOIN&apos;S LAYER 2
-              </span>
+              <div className=" text-[76px] md:text-[46px] font-bold text-white">
+                <div>REVOLUTIONIZING</div>
+                <div>BITCOIN&apos;S LAYER 2</div>
+              </div>
               <div className="gap-[30px] flex mt-[100px]">
                 <button className=" bg-white w-[208px] h-[57px] text-[20px] font-bold text-[#000000] ">
                   Read the Doc
@@ -44,39 +47,205 @@ export default function Home() {
                   Bridge assets
                 </button>
               </div>
-              <div className=" mt-[35px] text-[20px]  w-full">
-                BitViva responds to the growing need for a decentralized Layer 2
-                network, offering enhanced capabilities for Bitcoin&apos;s
-                ecosystem.
+              <div className=" mt-[35px] text-[20px]  w-full text-white">
+                <div>
+                  BitViva responds to the growing need for a decentralized Layer
+                  2 network, offering{" "}
+                </div>
+                <div> enhanced capabilities for Bitcoin&apos;s ecosystem.</div>
               </div>
             </div>
-            <img src={"./earth.png"} alt="" />
           </div>
         </div>
       </div>
-      <div className=" bg-[url(/bottomBg.png)] w-full h-[1000px]">
+      <div className=" bg-[url(/bottomBg.png)] w-full h-auto">
         <div className="w-container mx-auto flex mo:w-full md:w-full md:px-[30px] mo:px-[30px] ">
-          <div className=" mt-[120px] justify-center ">
-            <span className=" bg-gradient-to-b from-[#FFFFFF] to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
-              Native, seamless and compatible
-            </span>
-            <div className="grid grid-cols-2 gap-[118px] mt-[120px] ">
+          <div className=" mt-[120px] ">
+            <div className=" justify-center flex ">
+              <span className="bg-gradient-to-b md:text-[46px] from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+                NATIVE, SEAMLESS AND COMPATIBLE
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-[120px] md:gap-[60px] mt-[120px]   ">
               {content.map((e, i) => {
                 return (
-                  <div
-                    className="flex gap-10 items-center  "
-                    key={`content_${i}`}
-                  >
-                    <img src={e.icon} />
-                    <div className=" flex flex-col ">
-                      <span> {e.title}</span>
-                      <span> {e.content}</span>
+                  <div className={`flex gap-10  `} key={`content_${i}`}>
+                    <Image
+                      src={e.icon}
+                      alt=""
+                      width={100}
+                      height={100}
+                      className="w-auto h-[98px] md:h-[78px]"
+                    />
+                    <div className=" flex flex-col text-[#FFFFFF] ">
+                      <div className={` text-4xl md:text-[26px] font-bold  `}>
+                        {e.title}
+                      </div>
+                      <span className=" text-xl md:text-base font-light mt-[30px] md:mt-[10px]">
+                        {e.content}
+                      </span>
                     </div>
                   </div>
                 );
               })}
             </div>
+            <div className=" mt-[130px]">
+              <div className=" justify-center md:text-[46px] flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+                HOW DOES IT WORK
+              </div>
+              <div className="">
+                <div className=" flex justify-center mt-[100px] ">
+                  <div className=" text-[#FFFFFF] w-auto px-8 h-[68px] border md:text-[26px] text-4xl font-light flex items-center justify-center">
+                    BITVIVA NETWORK
+                  </div>
+                </div>
+                <div className=" flex justify-between mt-[83px] text-[#FFFFFF] ">
+                  <div className=" mt-[100px] mr-11">
+                    <div className=" w-auto px-8 h-[68px] border text-4xl md:text-[26px]  font-light flex items-center justify-center">
+                      ASSETS
+                    </div>
+                  </div>
+                  <img src="./line.png" className="md:w-[500px]"></img>
+                  <div className=" w-auto px-8 h-[68px] border text-4xl md:text-[26px] font-light flex items-center justify-center">
+                    TRANSACTIONS
+                  </div>
+                </div>
+              </div>
+              <div className="">
+                <div className=" h-[500px] relative right-40 mo:right-0 md:right-0 md:top-0 mo:top-0 top-[-130px] mo:hidden md:hidden ">
+                  <img src="./btc.svg" />
+                </div>
+                <div className=" mt-[-450px] md:mt-0 flex justify-between z-[9999px] relative   ">
+                  <img src="./btcIcon.png" className=" md:w-[450px] md:mt-7" />
+                  <img src="./ethIcon.png" className=" md:w-[450px] md:mt-7" />
+                </div>
+              </div>
+            </div>
+            <div className=" mt-[130px]">
+              <div className=" justify-center md:text-[46px] flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+                COMPETITIVE LANDSCAPE
+              </div>
+              <table className=" mt-10">
+                <tr className="no-border">
+                  <th>&nbsp;</th>
+                  <th>
+                    <div className="flex items-center gap-[6px]">
+                      <img src={"./bit.svg"} alt={"bit"} />
+                      <span>BitViva</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="flex items-center gap-[10px]">
+                      <img src={"./lightning.svg"} alt={"bit"} />
+                      <div className=" text-[13px]">
+                        <div>Lightning</div>
+                        <div>Network</div>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="flex items-center gap-[10px]">
+                      <img src={"./rootStock.svg"} alt={"bit"} />
+                      <span>Rootstock</span>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="flex items-center gap-[10px]">
+                      <img src={"./stacks.svg"} alt={"bit"} />
+                      Stacks
+                    </div>
+                  </th>
+                  <th>
+                    <div className="flex items-center gap-[6px]">
+                      <img src={"./liquid.svg"} alt={"bit"} />
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <div className=" mo:w-[120px]">Native Token</div>
+                  </td>
+                  <td className="bg-[#2c2e46]  font-medium">
+                    <div className=" mo:w-[200px] font1 ">BTC</div>
+                  </td>
+                  <td>
+                    <div className=" mo:w-[200px] font1 w-[100px]">n/a</div>
+                  </td>
+                  <td>
+                    <div className=" mo:w-[200px] font1">RBTC</div>
+                  </td>
+                  <td>
+                    <div className=" mo:w-[200px] font1">STX</div>
+                  </td>
+                  <td>
+                    <div className=" mo:w-[200px] font1">L-BTC</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Consensus</td>
+                  <td className="bg-[#2c2e46]">Ethereum PoS</td>
+                  <td>n/a</td>
+                  <td>PoW</td>
+                  <td>PoT</td>
+                  <td>Consortium</td>
+                </tr>
+                <tr>
+                  <td>VM/Smart Contract</td>
+                  <td className="bg-[#2c2e46]  ">EVM Solidity</td>
+                  <td>No</td>
+                  <td>RVM(forked EVM) Solidity</td>
+                  <td className="">Stacks VM Clarity</td>
+                  <td>Elements Core C++</td>
+                </tr>
+                <tr>
+                  <td>Two-way Peg</td>
+                  <td className="bg-[#2c2e46] ">
+                    Decentralized Nodes Taproot Schnorr
+                  </td>
+                  <td>RSMC HTLC</td>
+                  <td>Federated 8 of 15 multisia</td>
+                  <td>Collateral-based threshold signature</td>
+                  <td>Federated 11 of 15 multisia</td>
+                </tr>
+                <tr>
+                  <td>Asset lssuance</td>
+                  <td className="bg-[#2c2e46]">Yes</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+              </table>
+            </div>
+            <div className=" mt-[130px]">
+              <div className=" justify-center flex bg-gradient-to-b md:text-[46px]  from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+                STAY TUNED
+              </div>
+              <img className=" mt-[78px]" src="./stayTuned.svg"></img>
+            </div>
+            <div className=" mt-[133px]">
+              <div className=" justify-center md:text-[46px]  flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+                NEED MORE INFO?
+              </div>
+            </div>
+            <div className=" mt-10 flex justify-center">
+              <div className="flex  flex-col text-center text-xl font-light text-[#FFFFFF]">
+                <span className="">
+                  More docs will be available when the Testnet launches in
+                  coming weeks.
+                </span>
+                <span>In the meantime, join our Discord to learn more.</span>
+              </div>
+            </div>
+            <div className=" mt-20 flex justify-center ">
+              <button className=" bg-[#FFFFFF] text-[#000000] w-auto px-[32px] h-[57px] text-xl font-light  ">
+                JOIN BITVIVA DISCORD
+              </button>
+            </div>
           </div>
+        </div>
+        <div className=" flex justify-center mt-[120px] bg-[#000000] h-[68px] font-light items-center text-[#FFFFFF]">
+          © {currentYear} BitViva Network – All rights reserved
         </div>
       </div>
     </div>
