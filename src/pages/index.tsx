@@ -31,10 +31,10 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className=" bg-[url(/header.jpg)] w-full h-[800px] md:h-[724px] bg-cover">
+      <div className=" bg-[url(/header.jpg)] w-full h-[800px] md:h-[700px] bg-cover">
         <div className="w-container mx-auto flex mo:w-full md:w-full md:px-[30px] mo:px-[30px]   ">
           <div className=" flex flex-row items-center justify-between  ">
-            <div className=" mt-[130px]">
+            <div className=" mt-[170px]">
               <div
                 style={{ letterSpacing: "3.8px" }}
                 className=" text-[76px] md:text-[46px] font-bold text-white"
@@ -42,7 +42,7 @@ export default function Home() {
                 <div>REVOLUTIONIZING</div>
                 <div>BITCOIN&apos;S LAYER 2</div>
               </div>
-              <div className="gap-[30px] flex mt-[100px]">
+              <div className="gap-[30px] flex ">
                 <button
                   style={{ letterSpacing: "2px" }}
                   className=" bg-white w-[208px] h-[57px] text-[20px] font-bold text-[#000000]  "
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
             <img
               src="./earth.jpg"
-              className="md:w-[500px] w-[600px] mt-10 mr-10  "
+              className="md:w-[480px] w-[500px] mt-10 mr-10  "
             />
           </div>
         </div>
@@ -76,8 +76,15 @@ export default function Home() {
           <div className=" mt-[120px]   ">
             <div className=" ">
               <span
-                style={{ letterSpacing: "3.2px" }}
-                className="bg-gradient-to-b md:text-[46px] from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
+                style={{
+                  letterSpacing: "3.2px",
+                  background:
+                    "linear-gradient(180deg, #FFF 32.03%, #085CFF 116.41%)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+                className="bg-gradient-to-b md:text-[46px] from-white via-white to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold"
               >
                 NATIVE, SEAMLESS AND COMPATIBLE
               </span>
@@ -108,7 +115,14 @@ export default function Home() {
             </div>
             <div className=" mt-[130px]  ">
               <div
-                style={{ letterSpacing: "3.2px" }}
+                style={{
+                  letterSpacing: "3.2px",
+                  background:
+                    "linear-gradient(180deg, #FFF 32.03%, #085CFF 116.41%)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
                 className=" justify-center md:text-[46px] flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
               >
                 HOW DOES IT WORK
@@ -150,7 +164,14 @@ export default function Home() {
             </div>
             <div className=" mt-[130px]">
               <div
-                style={{ letterSpacing: "3.2px" }}
+                style={{
+                  letterSpacing: "3.2px",
+                  background:
+                    "linear-gradient(180deg, #FFF 32.03%, #085CFF 116.41%)",
+                  backgroundClip: "text",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
                 className=" justify-center md:text-[46px] flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
               >
                 COMPETITIVE LANDSCAPE
@@ -305,7 +326,14 @@ export default function Home() {
             </div>
             <div className=" mt-[130px]">
               <div
-                style={{ letterSpacing: "3.2px" }}
+                style={{
+                  letterSpacing: "3.2px",
+                  background:
+                    "linear-gradient(180deg, #FFF 32.03%, #085CFF 116.41%)",
+                  backgroundClip: "text",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
                 className=" justify-center flex bg-gradient-to-b md:text-[46px]  from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
               >
                 STAY TUNED
@@ -314,7 +342,14 @@ export default function Home() {
             </div>
             <div className=" mt-[133px]">
               <div
-                style={{ letterSpacing: "3.2px" }}
+                style={{
+                  letterSpacing: "3.2px",
+                  background:
+                    "linear-gradient(180deg, #FFF 32.03%, #085CFF 116.41%)",
+                  backgroundClip: "text",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
                 className=" justify-center md:text-[46px]  flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
               >
                 NEED MORE INFO?
