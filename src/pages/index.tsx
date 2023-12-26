@@ -31,57 +31,74 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className=" bg-[url(/headerBgI.svg)] w-full h-[824px] md:h-[624px] bg-center">
-        <div className="w-container mx-auto flex mo:w-full md:w-full md:px-[30px] mo:px-[30px] ">
-          <div className=" flex flex-row items-center mt-[120px] ">
-            <div>
-              <div className=" text-[76px] md:text-[46px] font-bold text-white">
+      <div className=" bg-[url(/header.jpg)] w-full h-[800px] md:h-[724px] bg-cover">
+        <div className="w-container mx-auto flex mo:w-full md:w-full md:px-[30px] mo:px-[30px]   ">
+          <div className=" flex flex-row items-center justify-between  ">
+            <div className=" mt-[130px]">
+              <div
+                style={{ letterSpacing: "3.8px" }}
+                className=" text-[76px] md:text-[46px] font-bold text-white"
+              >
                 <div>REVOLUTIONIZING</div>
                 <div>BITCOIN&apos;S LAYER 2</div>
               </div>
               <div className="gap-[30px] flex mt-[100px]">
-                <button className=" bg-white w-[208px] h-[57px] text-[20px] font-bold text-[#000000] ">
+                <button
+                  style={{ letterSpacing: "2px" }}
+                  className=" bg-white w-[208px] h-[57px] text-[20px] font-bold text-[#000000]  "
+                >
                   Read the Doc
                 </button>
-                <button className=" border-white border w-[208px] h-[57px] text-[20px] font-bold text-white">
+                <button
+                  style={{ letterSpacing: "2px" }}
+                  className=" border-white border-2 w-[208px] h-[57px] text-[20px] font-bold text-white"
+                >
                   Bridge assets
                 </button>
               </div>
-              <div className=" mt-[35px] text-[20px]  w-full text-white">
-                <div>
+              <div className=" mt-[35px] text-[20px]  w-full text-white ">
+                <div className=" w-full">
                   BitViva responds to the growing need for a decentralized Layer
-                  2 network, offering{" "}
+                  2 network, offering enhanced capabilities for Bitcoin&apos;s
+                  ecosystem.
                 </div>
-                <div> enhanced capabilities for Bitcoin&apos;s ecosystem.</div>
               </div>
             </div>
+            <img
+              src="./earth.jpg"
+              className="md:w-[500px] w-[600px] mt-10 mr-10  "
+            />
           </div>
         </div>
       </div>
       <div className=" bg-[url(/bottomBg.png)] w-full h-auto">
-        <div className="w-container mx-auto flex mo:w-full md:w-full md:px-[30px] mo:px-[30px] ">
-          <div className=" mt-[120px] ">
-            <div className=" justify-center flex ">
-              <span className="bg-gradient-to-b md:text-[46px] from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+        <div className="w-container mx-auto flex mo:w-full md:w-full md:px-[30px] mo:px-[30px]    ">
+          <div className=" mt-[120px]   ">
+            <div className=" ">
+              <span
+                style={{ letterSpacing: "3.2px" }}
+                className="bg-gradient-to-b md:text-[46px] from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
+              >
                 NATIVE, SEAMLESS AND COMPATIBLE
               </span>
             </div>
-            <div className="grid grid-cols-2 gap-[120px] md:gap-[60px] mt-[120px]   ">
+            <div className=" grid grid-cols-2 justify-between gap-[118px]  mt-[120px]    ">
               {content.map((e, i) => {
                 return (
-                  <div className={`flex gap-10  `} key={`content_${i}`}>
-                    <Image
+                  <div className={`flex gap-10`} key={`content_${i}`}>
+                    <img
                       src={e.icon}
                       alt=""
-                      width={100}
-                      height={100}
                       className="w-auto h-[98px] md:h-[78px]"
                     />
-                    <div className=" flex flex-col text-[#FFFFFF] ">
-                      <div className={` text-4xl md:text-[26px] font-bold  `}>
+                    <div className=" flex flex-col flex-wrap text-[#FFFFFF] ">
+                      <div
+                        style={{ letterSpacing: "1.8px" }}
+                        className={` text-4xl md:text-[26px] font-bold  `}
+                      >
                         {e.title}
                       </div>
-                      <span className=" text-xl md:text-base font-light mt-[30px] md:mt-[10px]">
+                      <span className="md:w-[330px] w-[400px] text-xl md:text-base font-light mt-[30px] md:mt-[10px]">
                         {e.content}
                       </span>
                     </div>
@@ -89,26 +106,36 @@ export default function Home() {
                 );
               })}
             </div>
-            <div className=" mt-[130px]">
-              <div className=" justify-center md:text-[46px] flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+            <div className=" mt-[130px]  ">
+              <div
+                style={{ letterSpacing: "3.2px" }}
+                className=" justify-center md:text-[46px] flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
+              >
                 HOW DOES IT WORK
               </div>
-              <div className="">
-                <div className=" flex justify-center mt-[100px] ">
-                  <div className=" text-[#FFFFFF] w-auto px-8 h-[68px] border md:text-[26px] text-4xl font-light flex items-center justify-center">
-                    BITVIVA NETWORK
+              <div className=" flex justify-center mt-[100px] ">
+                <div
+                  style={{ letterSpacing: "1.8px" }}
+                  className=" text-[#FFFFFF] w-auto px-8 h-[68px] border md:text-[26px] text-4xl font-light flex items-center justify-center"
+                >
+                  BITVIVA NETWORK
+                </div>
+              </div>
+              <div className=" flex justify-between mt-[83px] text-[#FFFFFF] ">
+                <div className=" mt-[100px] mr-11">
+                  <div
+                    style={{ letterSpacing: "1.8px" }}
+                    className=" w-auto px-8 h-[68px] border text-4xl md:text-[26px]  font-light flex items-center justify-center"
+                  >
+                    ASSETS
                   </div>
                 </div>
-                <div className=" flex justify-between mt-[83px] text-[#FFFFFF] ">
-                  <div className=" mt-[100px] mr-11">
-                    <div className=" w-auto px-8 h-[68px] border text-4xl md:text-[26px]  font-light flex items-center justify-center">
-                      ASSETS
-                    </div>
-                  </div>
-                  <img src="./line.png" className="md:w-[500px]"></img>
-                  <div className=" w-auto px-8 h-[68px] border text-4xl md:text-[26px] font-light flex items-center justify-center">
-                    TRANSACTIONS
-                  </div>
+                <img src="./line.png" className="md:w-[400px] w-[600px]" />
+                <div
+                  style={{ letterSpacing: "1.8px" }}
+                  className=" w-auto px-8 h-[68px] border text-4xl md:text-[26px] font-light flex items-center justify-center"
+                >
+                  TRANSACTIONS
                 </div>
               </div>
               <div className="">
@@ -122,7 +149,10 @@ export default function Home() {
               </div>
             </div>
             <div className=" mt-[130px]">
-              <div className=" justify-center md:text-[46px] flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+              <div
+                style={{ letterSpacing: "3.2px" }}
+                className=" justify-center md:text-[46px] flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
+              >
                 COMPETITIVE LANDSCAPE
               </div>
               <table className=" mt-10">
@@ -131,105 +161,170 @@ export default function Home() {
                   <th>
                     <div className="flex items-center gap-[6px]">
                       <img src={"./bit.svg"} alt={"bit"} />
-                      <span>BitViva</span>
+                      <span style={{ letterSpacing: "1.642px" }}>BitViva</span>
                     </div>
                   </th>
                   <th>
-                    <div className="flex items-center gap-[10px]">
+                    <div className="flex items-center gap-[10px] ">
                       <img src={"./lightning.svg"} alt={"bit"} />
-                      <div className=" text-[13px]">
+                      <div
+                        style={{ letterSpacing: "1.642px" }}
+                        className=" text-[13px]"
+                      >
                         <div>Lightning</div>
                         <div>Network</div>
                       </div>
                     </div>
                   </th>
                   <th>
-                    <div className="flex items-center gap-[10px]">
+                    <div className="flex items-center gap-[10px] ">
                       <img src={"./rootStock.svg"} alt={"bit"} />
                       <span>Rootstock</span>
                     </div>
                   </th>
                   <th>
-                    <div className="flex items-center gap-[10px]">
+                    <div
+                      style={{ letterSpacing: "1.642px" }}
+                      className="flex items-center gap-[10px] "
+                    >
                       <img src={"./stacks.svg"} alt={"bit"} />
                       Stacks
                     </div>
                   </th>
                   <th>
-                    <div className="flex items-center gap-[6px]">
+                    <div className="flex items-center gap-[6px] ">
                       <img src={"./liquid.svg"} alt={"bit"} />
                     </div>
                   </th>
                 </tr>
                 <tr>
                   <td>
-                    <div className=" mo:w-[120px]">Native Token</div>
+                    <div
+                      style={{ letterSpacing: "1.6px" }}
+                      className=" mo:w-[120px] w-[100px] "
+                    >
+                      Native Token
+                    </div>
                   </td>
                   <td className="bg-[#2c2e46]  font-medium">
-                    <div className=" mo:w-[200px] font1 ">BTC</div>
+                    <div
+                      style={{ letterSpacing: "1.6px" }}
+                      className=" mo: font1 "
+                    >
+                      BTC
+                    </div>
                   </td>
                   <td>
-                    <div className=" mo:w-[200px] font1 w-[100px]">n/a</div>
+                    <div
+                      style={{ letterSpacing: "1.6px" }}
+                      className=" mo: font1 w-[100px]"
+                    >
+                      n/a
+                    </div>
                   </td>
                   <td>
-                    <div className=" mo:w-[200px] font1">RBTC</div>
+                    <div
+                      style={{ letterSpacing: "1.6px" }}
+                      className=" mo: font1"
+                    >
+                      RBTC
+                    </div>
                   </td>
                   <td>
-                    <div className=" mo:w-[200px] font1">STX</div>
+                    <div
+                      style={{ letterSpacing: "1.6px" }}
+                      className=" mo: font1"
+                    >
+                      STX
+                    </div>
                   </td>
                   <td>
-                    <div className=" mo:w-[200px] font1">L-BTC</div>
+                    <div
+                      style={{ letterSpacing: "1.6px" }}
+                      className=" mo: font1"
+                    >
+                      L-BTC
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>Consensus</td>
-                  <td className="bg-[#2c2e46]">Ethereum PoS</td>
-                  <td>n/a</td>
-                  <td>PoW</td>
-                  <td>PoT</td>
-                  <td>Consortium</td>
+                  <td style={{ letterSpacing: "1.6px" }}>Consensus</td>
+                  <td
+                    style={{ letterSpacing: "1.6px" }}
+                    className="bg-[#2c2e46]"
+                  >
+                    Ethereum PoS
+                  </td>
+                  <td style={{ letterSpacing: "1.6px" }}>n/a</td>
+                  <td style={{ letterSpacing: "1.6px" }}>PoW</td>
+                  <td style={{ letterSpacing: "1.6px" }}>PoT</td>
+                  <td style={{ letterSpacing: "1.6px" }}>Consortium</td>
                 </tr>
                 <tr>
-                  <td>VM/Smart Contract</td>
-                  <td className="bg-[#2c2e46]  ">EVM Solidity</td>
-                  <td>No</td>
-                  <td>RVM(forked EVM) Solidity</td>
-                  <td className="">Stacks VM Clarity</td>
-                  <td>Elements Core C++</td>
+                  <td style={{ letterSpacing: "1.6px" }}>VM/Smart Contract</td>
+                  <td
+                    style={{ letterSpacing: "1.6px" }}
+                    className="bg-[#2c2e46]  "
+                  >
+                    EVM Solidity
+                  </td>
+                  <td style={{ letterSpacing: "1.6px" }}>No</td>
+                  <td style={{ letterSpacing: "1.6px" }}>
+                    RVM(forked EVM) Solidity
+                  </td>
+                  <td style={{ letterSpacing: "1.6px" }} className="">
+                    Stacks VM Clarity
+                  </td>
+                  <td style={{ letterSpacing: "1.6px" }}>Elements Core C++</td>
                 </tr>
                 <tr>
-                  <td>Two-way Peg</td>
+                  <td style={{ letterSpacing: "1.6px" }}>Two-way Peg</td>
                   <td className="bg-[#2c2e46] ">
                     Decentralized Nodes Taproot Schnorr
                   </td>
-                  <td>RSMC HTLC</td>
-                  <td>Federated 8 of 15 multisia</td>
-                  <td>Collateral-based threshold signature</td>
-                  <td>Federated 11 of 15 multisia</td>
+                  <td style={{ letterSpacing: "1.6px" }}>RSMC HTLC</td>
+                  <td style={{ letterSpacing: "1.6px" }}>
+                    Federated 8 of 15 multisia
+                  </td>
+                  <td style={{ letterSpacing: "1.6px" }}>
+                    Collateral-based threshold signature
+                  </td>
+                  <td style={{ letterSpacing: "1.6px" }}>
+                    Federated 11 of 15 multisia
+                  </td>
                 </tr>
                 <tr>
-                  <td>Asset lssuance</td>
+                  <td style={{ letterSpacing: "1.6px" }}>Asset lssuance</td>
                   <td className="bg-[#2c2e46]">Yes</td>
-                  <td>No</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
-                  <td>Yes</td>
+                  <td style={{ letterSpacing: "1.6px" }}>No</td>
+                  <td style={{ letterSpacing: "1.6px" }}>Yes</td>
+                  <td style={{ letterSpacing: "1.6px" }}>Yes</td>
+                  <td style={{ letterSpacing: "1.6px" }}>Yes</td>
                 </tr>
               </table>
             </div>
             <div className=" mt-[130px]">
-              <div className=" justify-center flex bg-gradient-to-b md:text-[46px]  from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+              <div
+                style={{ letterSpacing: "3.2px" }}
+                className=" justify-center flex bg-gradient-to-b md:text-[46px]  from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
+              >
                 STAY TUNED
               </div>
               <img className=" mt-[78px]" src="./stayTuned.svg"></img>
             </div>
             <div className=" mt-[133px]">
-              <div className=" justify-center md:text-[46px]  flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[64px] font-bold ">
+              <div
+                style={{ letterSpacing: "3.2px" }}
+                className=" justify-center md:text-[46px]  flex bg-gradient-to-b from-white via-gray-50 to-[#085CFF] text-transparent bg-clip-text text-[60px] font-bold "
+              >
                 NEED MORE INFO?
               </div>
             </div>
             <div className=" mt-10 flex justify-center">
-              <div className="flex  flex-col text-center text-xl font-light text-[#FFFFFF]">
+              <div
+                style={{ letterSpacing: "2px" }}
+                className="flex  flex-col text-center text-xl font-light text-[#FFFFFF]"
+              >
                 <span className="">
                   More docs will be available when the Testnet launches in
                   coming weeks.
@@ -238,13 +333,19 @@ export default function Home() {
               </div>
             </div>
             <div className=" mt-20 flex justify-center ">
-              <button className=" bg-[#FFFFFF] text-[#000000] w-auto px-[32px] h-[57px] text-xl font-light  ">
+              <button
+                style={{ letterSpacing: "2px" }}
+                className=" bg-[#FFFFFF] text-[#000000] w-auto px-[32px] h-[57px] text-xl font-light  "
+              >
                 JOIN BITVIVA DISCORD
               </button>
             </div>
           </div>
         </div>
-        <div className=" flex justify-center mt-[120px] bg-[#000000] h-[68px] font-light items-center text-[#FFFFFF]">
+        <div
+          style={{ letterSpacing: "1.6px" }}
+          className=" flex justify-center mt-[120px] bg-[#000000] h-[68px] font-light items-center text-[#FFFFFF]"
+        >
           © {currentYear} BitViva Network – All rights reserved
         </div>
       </div>
