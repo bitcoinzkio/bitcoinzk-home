@@ -34,7 +34,7 @@ export default function Home() {
       <div className=" bg-[url(/header.jpg)] w-full h-[800px] md:h-[700px] bg-cover">
         <div className="w-container mx-auto flex mo:w-full md:w-full md:px-[30px] mo:px-[30px]   ">
           <div className=" flex flex-row items-center justify-between  ">
-            <div className=" mt-[170px]">
+            <div className=" mt-[150px]">
               <div
                 style={{ letterSpacing: "3.8px" }}
                 className=" text-[76px] md:text-[46px] font-bold text-white"
@@ -42,7 +42,7 @@ export default function Home() {
                 <div>REVOLUTIONIZING</div>
                 <div>BITCOIN&apos;S LAYER 2</div>
               </div>
-              <div className="gap-[30px] flex ">
+              <div className="gap-[30px] flex mt-[100px] ">
                 <button
                   style={{ letterSpacing: "2px" }}
                   className=" bg-white w-[208px] h-[57px] text-[20px] font-bold text-[#000000]  "
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
             <img
               src="./earth.jpg"
-              className="md:w-[480px] w-[500px] mt-10 mr-10  "
+              className="md:w-[480px] w-[500px] mt-[-20px] mr-10  "
             />
           </div>
         </div>
