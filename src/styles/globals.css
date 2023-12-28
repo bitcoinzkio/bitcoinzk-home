@@ -78,11 +78,11 @@ th:first-child {
 
 
 
-th:first-child, td:first-child {
+/* th:first-child, td:first-child {
   position: sticky;
   left: 0;
   z-index: 1;
-}
+} */
 
 
 .font1{
