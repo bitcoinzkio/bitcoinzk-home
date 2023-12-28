@@ -1,5 +1,5 @@
 @tailwind base;
-@tailwind components;
+/* @tailwind components; */
 @tailwind utilities;
 
 :root {
@@ -25,20 +25,18 @@ body {
 }
 
 table {
-  border-collapse: collapse;
-  width: 100%;
   color: #FFFFFF;
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #D9D9D9;
   padding: 20px;
-  text-align: left;
-  height: 62px;
-  font-weight: 300;
 
 }
 
+table, th, td {
+  box-sizing: border-box;
+}
 
 tr.no-border th {
   border: none;
@@ -49,17 +47,34 @@ tr.title td {
 }
 
 .table-container {
-  overflow-x: auto;
   max-width: 100%;
+  padding-right: 10px;
 }
 
 
-th:first-child, td:first-child {
+/* th:first-child, td:first-child {
   position: sticky;
   left: 0;
-  z-index: 1;
+  z-index: 10;
+  min-width: 100px;
+
+}
+th:first-child::before, td:first-child::before {
+  content: '';
+  position: absolute;
+  left: -1px; 
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #FFFFFF;
 }
 
+th:first-child {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+} */
 
 
 .font1{

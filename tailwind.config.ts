@@ -15,6 +15,7 @@ const config: Config = {
       },
     },
     screens: {
+      xmo: { min: "100px", max: "500px" },
       lg: { min: "90rem" },
       mo: { max: "900px" },
       md: [{ min: "900px", max: "1280px" }],
@@ -24,6 +25,17 @@ const config: Config = {
       full: "100%",
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }: any) {
+      addComponents({
+        ".container": {
+          maxWidth: "100%",
+          "@screen xl": {
+            maxWidth: "1200px",
+          },
+        },
+      });
+    },
+  ],
 };
 export default config;

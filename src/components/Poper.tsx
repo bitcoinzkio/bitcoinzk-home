@@ -69,7 +69,7 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
         <div
           style={{ filter: "drop-shadow(0 0 15px rgba(0, 0, 0, 0.2))" }}
           className={classNames(
-            "absolute w-[13.75rem] top-full right-0 mo:right-[-1rem]",
+            "absolute w-[130px] top-full right-0",
             containerClassName
           )}
         >
