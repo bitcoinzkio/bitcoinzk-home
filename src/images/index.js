@@ -13,6 +13,12 @@ import IconExpand from "@/images/IconExpand";
 import IconleftArrow from "@/images/IconleftArrow";
 import IconRightArrow from "@/images/IconRightArrow";
 import IconRight from "@/images/IconRight";
+import IconShield from "@/images/IconShield";
+import IconShieldHover from "@/images/IconShieldHover";
+import IconArrowN from "@/images/IconArrowN";
+import IconTrust from "@/images/IconTrust";
+import IconTrustHover from "@/images/IconTrustHover";
+import IconBitcoinZk from "@/images/IconBitcoinZk";
 
 export const base = {
   logo: IconLogo,
@@ -29,6 +35,12 @@ export const base = {
   leftArrow: IconleftArrow,
   rightArrow: IconRightArrow,
   right: IconRight,
+  shield: IconShield,
+  shieldHover: IconShieldHover,
+  arrowN: IconArrowN,
+  trust: IconTrust,
+  trustHover: IconTrustHover,
+  bitcoinZk: IconBitcoinZk,
 };
 
 const Icon = ({ name, ...otherProps }) => {

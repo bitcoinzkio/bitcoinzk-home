@@ -8,7 +8,7 @@ const Header = () => {
   const color = useContext(ColorSchemeContext) === "light";
 
   return (
-    <div className="flex mt-[22px] justify-between  mo:justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px]  ">
+    <div className="flex mt-[22px] justify-between   z-20 mo:justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px] ">
       <div className="justify-start flex">
         <Icon name={"logo"} />
       </div>

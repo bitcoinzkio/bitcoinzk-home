@@ -16,17 +16,11 @@
   }
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ body {
+  background:#F8F8F8
 }
 
-@layer utilities {
+/*@layer utilities {
   .text-balance {
     text-wrap: balance;
   }
@@ -39,7 +33,7 @@
   left: 0;
   content: '';
   width: 100%;
-  height: 70%;
+  height: 50%;
   background-image: linear-gradient(
       0deg,
       #7622FF 0px,
@@ -67,14 +61,6 @@
 }
 
 
-.dashed-border {
-  border-style: dotted;
-  border-width: 1px; /* 设置边框宽度 */
-  border-color: white; /* 设置边框颜色 */
-  
-  /* 设置虚线间隔和长度 */
-  border-image: linear-gradient(to right, transparent 50%, white 50% 100%) 1;
-}
 
 
 

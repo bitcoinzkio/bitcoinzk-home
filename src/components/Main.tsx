@@ -2,10 +2,10 @@ import Icon from "@/images";
 
 const Main = () => {
   return (
-    <div className="mainBg">
+    <div className="mainBg ">
       <div
         className={
-          "mx-auto container  md:px-[30px] bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat  "
+          "mx-auto container  md:px-[30px] bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat "
         }
       >
         <div className="flex  justify-center  pt-[140px]">
