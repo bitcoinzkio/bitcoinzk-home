@@ -1,6 +1,6 @@
 import { useAutoAnim } from "@/hooks/useAutoAnim";
 import classNames from "classnames";
-import React, { Fragment, HTMLAttributes } from "react";
+import React, { Fragment, HTMLAttributes, useState } from "react";
 import { RxTriangleUp } from "react-icons/rx";
 import { useClickAway, useToggle } from "react-use";
 import { useRouter } from "next/navigation";
@@ -10,6 +10,7 @@ export interface MenuItem {
   icon?: any;
   text: any;
   to?: string;
+  content?: string;
   selected?: boolean;
   onClick?: () => void;
   [key: string]: any;
@@ -40,9 +41,11 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
 
   const [show, toggleShow] = useToggle(false);
   const ref = useAutoAnim<HTMLDivElement>("t-side");
+  const [active, setActive] = useState("");
   useClickAway(ref, () => show && toggleShow(false));
 
   const onClickItem = (item: MenuItem) => {
+    setActive(item.text);
     typeof chooseItem === "function" && chooseItem(item);
     if (item.onClick) {
       item.onClick();
@@ -69,7 +72,7 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
         <div
           style={{ filter: "drop-shadow(0 0 15px rgba(0, 0, 0, 0.2))" }}
           className={classNames(
-            "absolute w-[130px] top-full right-0",
+            "absolute w-[13.75rem] top-full right-[-115px] mo:right-[-1rem]",
             containerClassName
           )}
         >
@@ -79,7 +82,7 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
               iconClassName
             )}
           />
-          <div className="py-[.625rem] mo:py-[.375rem] w-full bg-white mt-[.625rem] mo:mt-[.625rem] rounded-lg z-10 relative">
+          <div className="py-[.625rem] mo:py-[.375rem] w-full bg-white mt-[.625rem] mo:mt-[.625rem] rounded-2xl z-10 relative">
             {menus.map((item, i) => (
               <Fragment key={`poper_menu_item${i}`}>
                 {item.topSplit && i > 0 && (
@@ -87,9 +90,9 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
                 )}
                 <div
                   className={classNames(
-                    "flex items-center py-[.625rem] mo:py-[.875rem] px-4 text-black hover:text-green-2 cursor-pointer",
+                    "flex items-center mx-3 py-4 mo:py-[.875rem] px-4 text-black hover:text-green-2 cursor-pointer",
                     {
-                      "text-green-2": item.selected,
+                      "bg-[#F5F5F5]  rounded-lg": item.text === active,
                     }
                   )}
                   onClick={() =>
@@ -99,8 +102,13 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
                   {!!item.icon && (
                     <div className="text-xl mo:text-2xl">{item.icon}</div>
                   )}
-                  <div className="ml-3 text-sm font-medium mo:text-base mo:font-normal">
-                    {item[keys]}
+                  <div className=" flex flex-col">
+                    <div className=" text-sm font-bold  font-ns mo:text-base mo:font-normal">
+                      {item[keys]}
+                    </div>
+                    <div className="w-auto text-xs font-ns ">
+                      {item.content}
+                    </div>
                   </div>
                 </div>
               </Fragment>

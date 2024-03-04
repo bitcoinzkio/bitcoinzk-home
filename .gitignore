@@ -5,8 +5,9 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
-/.history
 
+
+/.history
 # testing
 /coverage
 
@@ -35,3 +36,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+node_modules

@@ -1,5 +1,5 @@
 {
-  "name": "bitviva-home",
+  "name": "bitcoin-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,26 +9,31 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/nunito-sans": "^5.0.8",
+    "@formkit/auto-animate": "^0.8.1",
+    "@react-spring/parallax": "^9.7.3",
+    "@react-spring/web": "^9.7.3",
+    "classnames": "^2.3.2",
+    "framer-motion": "^11.0.8",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4",
-    "classnames": "^2.3.2",
     "react-icons": "^4.11.0",
+    "react-slick": "0.30.2",
     "react-use": "^17.4.0",
-    "@formkit/auto-animate": "^0.8.1"
+    "slick-carousel": "1.8.1",
+    "styled-components": "^6.1.6"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.12",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4"
-  },
-  "volta": {
-    "node": "18.18.0"
+    "typescript": "^5"
   }
 }

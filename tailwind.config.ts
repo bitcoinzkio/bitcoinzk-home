@@ -13,29 +13,21 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-    },
-    screens: {
-      xmo: { min: "100px", max: "500px" },
-      lg: { min: "90rem" },
-      mo: { max: "900px" },
-      md: [{ min: "900px", max: "1280px" }],
-    },
-    width: {
-      container: "75rem",
-      full: "100%",
+      fontFamily: {
+        ns: "Nunito Sans",
+        ms: "Montserrat",
+        le: "Lexend",
+      },
+      screens: {
+        lg: { min: "90rem" },
+        mo: { max: "900px" },
+        md: [{ min: "900px", max: "1280px" }],
+      },
+      width: {
+        container: "75rem",
+      },
     },
   },
-  plugins: [
-    function ({ addComponents }: any) {
-      addComponents({
-        ".container": {
-          maxWidth: "100%",
-          "@screen xl": {
-            maxWidth: "1200px",
-          },
-        },
-      });
-    },
-  ],
+  plugins: [],
 };
 export default config;

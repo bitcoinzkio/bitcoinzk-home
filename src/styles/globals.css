@@ -1,5 +1,5 @@
 @tailwind base;
-/* @tailwind components; */
+@tailwind components;
 @tailwind utilities;
 
 :root {
@@ -15,78 +15,69 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-html{
-  font-family: 'Outfit';
-}
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
-  background: white;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
-table {
-  color: #FFFFFF;
-}
-
-th, td {
-  border: 1px solid #D9D9D9;
-  padding: 20px;
-  text-align: left;
-  height: 62px;
-  font-weight: 300;
-
-}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
 
 
-tr.no-border th {
-  border: none;
-}
-
-tr.title td {
-  width: 100px;
-}
-
-.table-container {
-  max-width: 100%;
-  padding-right: 10px;
-}
-
-
-/* th:first-child, td:first-child {
-  position: sticky;
+.mainBg::after {
+  position: fixed;
+  top: 0;
   left: 0;
-  z-index: 10;
-  min-width: 100px;
-
-}
-th:first-child::before, td:first-child::before {
   content: '';
-  position: absolute;
-  left: -1px; 
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background-color: #FFFFFF;
+  width: 100%;
+  height: 70%;
+  background-image: linear-gradient(
+      0deg,
+      #7622FF 0px,
+      #7622FF 1px,
+      transparent 1px,
+      transparent 100px
+    ),
+    linear-gradient(
+      90deg,
+      #7622FF 0px,
+      #7622FF 1px,
+      transparent 1px,
+      transparent 100px
+    );
+  background-size: 250px 200px;
+  opacity: 0.1;
+  z-index: -1;
 }
 
-th:first-child {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 0;
-} */
 
 
-
-/* th:first-child, td:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 1;
-} */
-
-
-.font1{
-  font-weight: 700;
+.image-slider-container .slick-prev:before,
+.image-slider-container .slick-next:before {
+  color: black;
 }
+
+
+.dashed-border {
+  border-style: dotted;
+  border-width: 1px; /* 设置边框宽度 */
+  border-color: white; /* 设置边框颜色 */
+  
+  /* 设置虚线间隔和长度 */
+  border-image: linear-gradient(to right, transparent 50%, white 50% 100%) 1;
+}
+
+
+
+
 
 

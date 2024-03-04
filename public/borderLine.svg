@@ -1,0 +1,26 @@
+<svg width="580" height="580" viewBox="0 0 580 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.5" y="129.5" width="100" height="1" fill="white"/>
+<rect opacity="0.5" x="130.5" width="100" height="1" transform="rotate(90 130.5 0)" fill="white"/>
+<rect opacity="0.5" x="130.5" y="160" width="100" height="1" transform="rotate(90 130.5 160)" fill="white"/>
+<rect opacity="0.5" x="290.5" width="100" height="1" transform="rotate(90 290.5 0)" fill="white"/>
+<rect x="290.5" y="160" width="100" height="1" transform="rotate(90 290.5 160)" fill="white"/>
+<rect x="450.5" width="100" height="1" transform="rotate(90 450.5 0)" fill="white"/>
+<rect x="450.5" y="160" width="100" height="1" transform="rotate(90 450.5 160)" fill="white"/>
+<rect opacity="0.5" x="160" y="129.5" width="100" height="1" fill="white"/>
+<rect x="320" y="129.5" width="100" height="1" fill="white"/>
+<rect x="480" y="129.5" width="100" height="1" fill="white"/>
+<rect opacity="0.5" y="289.5" width="100" height="1" fill="white"/>
+<rect x="130.5" y="320" width="100" height="1" transform="rotate(90 130.5 320)" fill="white"/>
+<rect x="290.5" y="320" width="100" height="1" transform="rotate(90 290.5 320)" fill="white"/>
+<rect opacity="0.5" x="450.5" y="320" width="100" height="1" transform="rotate(90 450.5 320)" fill="white"/>
+<rect opacity="0.5" x="160" y="289.5" width="100" height="1" fill="white"/>
+<rect x="320" y="289.5" width="100" height="1" fill="white"/>
+<rect opacity="0.5" x="480" y="289.5" width="100" height="1" fill="white"/>
+<rect y="449.5" width="100" height="1" fill="white"/>
+<rect x="130.5" y="480" width="100" height="1" transform="rotate(90 130.5 480)" fill="white"/>
+<rect opacity="0.5" x="290.5" y="480" width="100" height="1" transform="rotate(90 290.5 480)" fill="white"/>
+<rect opacity="0.5" x="450.5" y="480" width="100" height="1" transform="rotate(90 450.5 480)" fill="white"/>
+<rect x="160" y="449.5" width="100" height="1" fill="white"/>
+<rect opacity="0.5" x="320" y="449.5" width="100" height="1" fill="white"/>
+<rect opacity="0.5" x="480" y="449.5" width="100" height="1" fill="white"/>
+</svg>
