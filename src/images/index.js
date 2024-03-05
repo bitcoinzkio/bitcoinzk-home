@@ -10,7 +10,7 @@ import IconStar from "@/images/IconStar";
 import IconJump from "@/images/IconJump";
 import IconNstar from "@/images/IconNstar";
 import IconExpand from "@/images/IconExpand";
-import IconleftArrow from "@/images/IconleftArrow";
+import IconLeftArrow from "@/images/IconLeftArrow";
 import IconRightArrow from "@/images/IconRightArrow";
 import IconRight from "@/images/IconRight";
 import IconShield from "@/images/IconShield";
@@ -32,7 +32,7 @@ export const base = {
   jump: IconJump,
   nStar: IconNstar,
   expand: IconExpand,
-  leftArrow: IconleftArrow,
+  leftArrow: IconLeftArrow,
   rightArrow: IconRightArrow,
   right: IconRight,
   shield: IconShield,
