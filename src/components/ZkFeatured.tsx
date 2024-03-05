@@ -106,8 +106,6 @@ const ZkFeatured = () => {
   ];
   const maxSlides = content.length;
 
-  console.log("maxSlidesmaxSlides", maxSlides);
-
   const onNext = () => {
     if (current < maxSlides) {
       setCurrent(current + 1);

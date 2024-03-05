@@ -19,8 +19,6 @@ export default function App({ Component, pageProps }: AppProps) {
     };
   }, []);
 
-  console.log("colorScheme", colorScheme);
-
   return (
     <ColorSchemeContext.Provider value={colorScheme}>
       <Component {...pageProps} />
