@@ -46,7 +46,7 @@ const Testnet = () => {
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
-        className="bg-[url(/IconBGP.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center justify-center "
+        className="bg-[url(/prupleBg.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center justify-center "
       >
         <div className=" font-le text-2xl  text-white font-light  ">
           <div className=" flex items-center">
