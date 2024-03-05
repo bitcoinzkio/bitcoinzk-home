@@ -2,7 +2,11 @@ import Icon from "@/images";
 
 const Featured = () => {
   return (
-    <div className="justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px]">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+      className="justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]"
+    >
       <div className=" font-le font-medium  text-[80px] mt-20 flex items-center">
         ZK100% <span className=" font-medium text-[40px] mx-5">/</span> BY100%
       </div>

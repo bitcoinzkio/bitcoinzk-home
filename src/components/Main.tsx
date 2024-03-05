@@ -2,10 +2,10 @@ import Icon from "@/images";
 
 const Main = () => {
   return (
-    <div className="mainBg ">
+    <div data-aos="fade-up" className="mainBg aos-init aos-animate  ">
       <div
         className={
-          "mx-auto container  md:px-[30px] bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat "
+          "mx-auto w-container px-10  md:px-[30px] bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat "
         }
       >
         <div className="flex  justify-center  pt-[140px]">
@@ -35,7 +35,7 @@ const Main = () => {
             <img src={"./IconCircle.png"} />
           </div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between px-10">
           <div className="bg-[url(/IconBorder.svg)] w-[226px] h-[177px]  bg-cover object-cover bg-repeat flex text-center items-center justify-center">
             <div>
               <div className="text-[#7622FF] text-lg font-le">

@@ -6,7 +6,7 @@ const IconRightArrow = ({ color = "#7622FF" }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_182_2836)">
+    <g clipPath="url(#clip0_182_2836)">
       <path
         d="M26.595 7H0V5H26.595L23 1.262L24.227 0L29.393 5.372L30 5.996L29.997 6L30 6.004L29.393 6.628L24.227 12L23 10.738L26.595 7Z"
         fill={color}

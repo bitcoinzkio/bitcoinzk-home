@@ -4,14 +4,23 @@ import { DivBox, Wrapper } from "./StyleButton";
 const Testnet = () => {
   return (
     <>
-      <img src="./IconLine1.svg" className=" absolute  right-[100px]" />
-      <div className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center  ">
+      <img
+        src="./IconLine1.svg"
+        className=" absolute  right-[100px] z-10 mt-[30px]"
+      />
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center  "
+      >
         <div className=" font-le text-[42px] font-medium  text-white flex justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px]">
           BitcoinZK Testnet is LIVE.
         </div>
       </div>
 
       <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
         className=" py-[1px]"
         style={{
           borderRadius: "1px",
@@ -34,7 +43,11 @@ const Testnet = () => {
           </div>
         </div>
       </div>
-      <div className="  bg-[url(/IconBG1.svg)] bg-cover object-cover bg-repeat h-[130px]  flex items-center justify-center ">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        className="  bg-[url(/IconBG1.svg)] bg-cover object-cover bg-repeat h-[130px]  flex items-center justify-center "
+      >
         <div className=" font-le text-2xl  text-white font-light  ">
           <div className=" flex items-center">
             If you are a BTC user, go to this
@@ -49,7 +62,11 @@ const Testnet = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center  ">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center  "
+      >
         <div className=" font-le text-[24px] font-light  text-white  flex items-center  justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px]">
           If you are a developer, go to this{" "}
           <span className=" font-semibold ml-3">Build Docs</span>

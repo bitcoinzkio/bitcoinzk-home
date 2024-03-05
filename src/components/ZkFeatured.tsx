@@ -14,6 +14,7 @@ const ZkFeatured = () => {
     slidesToScroll: 1,
     adaptiveHeight: true,
     arrows: false,
+    draggable: false,
   };
   const content = [
     {
@@ -23,7 +24,7 @@ const ZkFeatured = () => {
         <>
           <div className=" mt-[54px] font-light text-xl leading-9">
             BitcoinZK is designed to be thoroughly
-            <span className="font-bold">ZK-able</span> to enable a functioning
+            <span className="font-bold"> ZK-able</span> to enable a functioning
             system that scale bitcoin’s security and values with minimized trust
             assumption introduced.
           </div>
@@ -46,7 +47,7 @@ const ZkFeatured = () => {
         <>
           <div className=" mt-[54px] font-light text-xl leading-9 ">
             BitcoinZK supports
-            <span className="font-bold">BTC native gas fee </span>and
+            <span className="font-bold"> BTC native gas fee </span>and
             <span className="font-bold"> BTC address AA </span>
             (Account Abstraction) to guarantee smoothier UX and lowered
             onboarding cost for bitcoin users.
@@ -126,7 +127,11 @@ const ZkFeatured = () => {
   };
 
   return (
-    <div className=" mt-5  ">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      className=" mt-10   "
+    >
       <Slider
         {...settings}
         ref={(slider: any) => {
@@ -197,7 +202,7 @@ const ZkFeatured = () => {
                 </div>
 
                 <div className=" flex w-full h-full mt-[50px]">
-                  <div className="flex flex-col ml-[120px] ">
+                  <div className="flex flex-col mx-[100px] ">
                     <div className=" flex items-center flex-row ">
                       <Icon name={"expand"} />
                       <span className=" ml-3 font-bold text-[40px] md:text-2xl">

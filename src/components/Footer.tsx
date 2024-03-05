@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div className=" bg-white font-le h-[115px] mt-[50px] flex items-center border-b-[1px]">
-        <div className="justify-center  mo:mx-10   mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px]">
+        <div className="justify-center  mo:mx-10   mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
           <div className=" flex justify-between items-center">
             <Icon name={"bitcoinZk"} />
             <div className="flex gap-[100px] w-[300px]">
@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
       </div>
       <div className=" bg-white font-le flex h-[141px]">
-        <div className="justify-center mt-[30px] mo:mx-10 text-sm mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px]">
+        <div className="justify-center mt-[30px] mo:mx-10 text-sm mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
           <div className="flex justify-between ">
             The Zero-knowledge based, EVM-compatible Rollup for bitcoin.
             <div className=" flex gap-[100px] w-[300px] text-sm">

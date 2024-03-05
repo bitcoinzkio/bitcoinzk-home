@@ -24,7 +24,8 @@ const config: Config = {
         md: [{ min: "900px", max: "1280px" }],
       },
       width: {
-        container: "75rem",
+        container: "1280px",
+        TContainer: "56.25rem",
       },
     },
   },

@@ -27,8 +27,14 @@ const Road = () => {
   ];
 
   return (
-    <div className=" mt-20 font-le flex  justify-center mo:mx-10 px-[30px]  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px]">
-      <div className=" flex justify-between gap-[50px]  ">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-offset="500"
+      data-aos-duration="500"
+      className=" mt-20 font-le flex  justify-center mo:mx-10   mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]"
+    >
+      <div className=" flex justify-between gap-5  ">
         {content.map((item, index) => {
           return (
             <div
@@ -41,7 +47,7 @@ const Road = () => {
                 setIsHover(false);
               }}
               key={`box_${index}`}
-              className="target bg-white rounded-[20px] w-[740px]  hover:bg-black  hover:text-white "
+              className="target transition delay-150  duration-300 ease-in-out bg-white rounded-[20px] w-full  hover:bg-black  hover:text-white "
             >
               <div className="px-10  pb-10">
                 <div className=" pt-10">

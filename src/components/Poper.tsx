@@ -70,6 +70,7 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
       </div>
       {show && menus.length > 0 && (
         <div
+          data-aos="fade-down"
           style={{ filter: "drop-shadow(0 0 15px rgba(0, 0, 0, 0.2))" }}
           className={classNames(
             "absolute w-[13.75rem] top-full right-[-115px] mo:right-[-1rem]",
@@ -82,7 +83,11 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
               iconClassName
             )}
           />
-          <div className="py-[.625rem] mo:py-[.375rem] w-full bg-white mt-[.625rem] mo:mt-[.625rem] rounded-2xl z-10 relative">
+
+          <div
+            data-aos="flip-up"
+            className="py-[.625rem] mo:py-[.375rem] w-full bg-white mt-[.625rem] mo:mt-[.625rem] rounded-2xl z-10 relative"
+          >
             {menus.map((item, i) => (
               <Fragment key={`poper_menu_item${i}`}>
                 {item.topSplit && i > 0 && (
