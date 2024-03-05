@@ -17,6 +17,7 @@ const config: Config = {
         ns: "Nunito Sans",
         ms: "Montserrat",
         le: "Lexend",
+        hn: "Helvetica Neue",
       },
       screens: {
         lg: { min: "90rem" },

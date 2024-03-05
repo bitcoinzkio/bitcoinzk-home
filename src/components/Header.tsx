@@ -8,11 +8,11 @@ const Header = () => {
   const color = useContext(ColorSchemeContext) === "light";
 
   return (
-    <div className="flex mt-[22px] justify-between px-10   z-20 mo:justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px] ">
+    <div className="flex mt-[22px] justify-between px-10  z-20 mo:justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px] ">
       <div className="justify-start flex">
         <Icon name={"logo"} />
       </div>
-      <div className="flex gap-[50px] ">
+      <div className="flex gap-[50px]">
         <div className={` rounded-[10px] items-center flex bg-[#000000] `}>
           <div className={` mx-[15px] flex items-center gap-2  `}>
             <span className=" text-lg text-white">Docs</span>

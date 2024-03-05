@@ -5,12 +5,12 @@ const Main = () => {
     <div data-aos="fade-up" className="mainBg aos-init aos-animate  ">
       <div
         className={
-          "mx-auto w-container px-10  md:px-[30px] bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat "
+          "mx-auto w-container px-10 md:w-full md:px-[30px] bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat "
         }
       >
-        <div className="flex  justify-center  pt-[140px]">
+        <div className="flex  justify-center pt-[140px]">
           <div className=" flex flex-col  ">
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 font-hn">
               <span className=" text-[#7622FF] text-[80px] font-bold ">
                 ZK LAYER2
               </span>
@@ -19,8 +19,10 @@ const Main = () => {
                 BITCOIN
               </div>
             </div>
-            <div className="text-[80px] font-bold text-center">Zero-knowle</div>
-            <div className="flex justify-center gap-5 mt-[58px] ">
+            <div className="text-[80px] font-bold text-center font-hn">
+              Zero-knowle
+            </div>
+            <div className="flex justify-center gap-5 mt-[58px] font-le ">
               <div className="text-xl gap-2 font-le bg-[#000000] text-white w-52 h-14 flex items-center justify-center rounded-[10px]">
                 <Icon name={"star"} />
                 Read Docs.
@@ -35,8 +37,8 @@ const Main = () => {
             <img src={"./IconCircle.png"} />
           </div>
         </div>
-        <div className="flex justify-between px-10">
-          <div className="bg-[url(/IconBorder.svg)] w-[226px] h-[177px]  bg-cover object-cover bg-repeat flex text-center items-center justify-center">
+        <div className="flex justify-between mt-[33px]  ">
+          <div className="bg-[url(/IconBorder.svg)] w-[226px] h-[177px]   bg-cover object-cover bg-repeat flex text-center items-center justify-center">
             <div>
               <div className="text-[#7622FF] text-lg font-le">
                 Real-time TVL
