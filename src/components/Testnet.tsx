@@ -13,8 +13,12 @@ const Testnet = () => {
         data-aos-anchor-placement="top-bottom"
         className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center  "
       >
-        <div className=" font-le text-[42px] font-medium  text-white flex justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px]">
-          BitcoinZK Testnet is LIVE.
+        <div className=" font-le h-[80px] text-[58px] items-center font-medium gap-5 text-white flex mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
+          <div className=" text-sm relative top-[-12px]">{"//"}</div>
+          <div className=" items-baseline ">
+            <span className=" "> BitcoinZK</span>
+            <span className=" text-[42px] "> Testnet is LIVE.</span>
+          </div>
         </div>
       </div>
 
@@ -32,10 +36,10 @@ const Testnet = () => {
         }}
       >
         <div className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center ">
-          <div className=" flex-col flex justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px] ">
-            <div className=" font-le text-2xl font-light text-white  text-center ">
-              We are glad to announce our Maxwell testnet with key features and
-              components
+          <div className=" flex-col flex  mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px] ">
+            <div className=" font-le text-2xl font-light text-white  ">
+              {"//"} We are glad to announce our Maxwell testnet with key
+              features and components
               <div className=" font-le text-2xl font-light text-white ">
                 ready for open test, user demo and bug hunting, etc.
               </div>
@@ -63,7 +67,7 @@ const Testnet = () => {
         >
           <div className=" font-le text-2xl  text-white font-light  ">
             <div className=" flex items-center">
-              If you are a BTC user, go to this
+              {"//"} If you are a BTC user, go to this
               <span className="font-semibold ml-3"> Bridge page </span>
               <div className=" mx-3">
                 <Icon name="arrowN" />
@@ -82,8 +86,8 @@ const Testnet = () => {
         data-aos-anchor-placement="top-bottom"
         className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center  "
       >
-        <div className=" font-le text-[24px] font-light  text-white  flex items-center  justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px]">
-          If you are a developer, go to this{" "}
+        <div className=" font-le text-[24px] font-light  text-white  flex items-center  mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
+          {"//"} If you are a developer, go to this{" "}
           <span className=" font-semibold ml-3">Build Docs</span>
           <div className=" mx-3">
             <Icon name="arrowN" />
