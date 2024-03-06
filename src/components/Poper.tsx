@@ -45,7 +45,6 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
   useClickAway(ref, () => show && toggleShow(false));
 
   const onClickItem = (item: MenuItem) => {
-    setActive(item.text);
     typeof chooseItem === "function" && chooseItem(item);
     if (item.onClick) {
       item.onClick();
@@ -97,9 +96,13 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
                   className={classNames(
                     "flex items-center mx-3 py-4 mo:py-[.875rem] px-4 text-black hover:text-green-2 cursor-pointer",
                     {
-                      "bg-[#F5F5F5]  rounded-lg": item.text === active,
+                      "hover:bg-[#F5F5F5]  hover:rounded-lg":
+                        item.text === active,
                     }
                   )}
+                  onMouseEnter={() => {
+                    setActive(item.text);
+                  }}
                   onClick={() =>
                     !item.to ? onClickItem(item) : r.push(item.to)
                   }

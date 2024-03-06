@@ -64,7 +64,21 @@
 
 
 
+#bitTitle {
+  margin-left: 8px;
+}
 
-
-
-
+.input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 80px;
+  background-color: white;
+  margin-left: 8px;
+  animation: blink .10s linear infinite alternate;
+}
+@keyframes blink {
+  0% {opacity: 1;}
+  40% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;}
+}

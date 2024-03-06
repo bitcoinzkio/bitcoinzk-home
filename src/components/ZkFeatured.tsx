@@ -3,9 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useRef, useState } from "react";
-
 const ZkFeatured = () => {
   let sliderRef = useRef<any>(null);
+  const [disableOuterScroll, setDisableOuterScroll] = useState(false);
+
   const [current, setCurrent] = useState(0);
   const settings = {
     className: "",
@@ -14,8 +15,12 @@ const ZkFeatured = () => {
     slidesToScroll: 1,
     adaptiveHeight: true,
     arrows: false,
-    draggable: false,
+    vertical: true,
+    verticalSwiping: true,
+    swipeToSlide: true,
+    cssEase: "linear",
   };
+
   const content = [
     {
       title: "100% ZK-featured",
@@ -30,7 +35,7 @@ const ZkFeatured = () => {
           </div>
           <div className=" mt-6 font-light text-xl leading-9">
             100% layer2 behaviors will be
-            <span className=" font-bold">provable</span> by ZK-SANRKS, and 100%
+            <span className=" font-bold"> provable</span> by ZK-SANRKS, and 100%
             ZK proofs will be
             <span className=" font-bold">verifiable</span> by the public.
           </div>
@@ -124,17 +129,54 @@ const ZkFeatured = () => {
     setCurrent(i);
   };
 
+  const handleWheel = (event: {
+    deltaY: any;
+    preventDefault: () => void;
+    stopPropagation: () => void;
+  }) => {
+    document.body.style.overflow = "hidden";
+
+    const deltaY = event.deltaY;
+
+    if (deltaY > 0) {
+      if (current + 1 === maxSlides) {
+        event.preventDefault();
+        document.body.style.overflow = "auto";
+
+        return;
+      }
+      (sliderRef as any).slickNext();
+    } else if (deltaY < 0) {
+      if (current === 0) {
+        event.preventDefault();
+        document.body.style.overflow = "auto";
+
+        return;
+      }
+      (sliderRef as any).slickPrev();
+    }
+
+    event.stopPropagation();
+  };
+
+  const handleAfterChange = (index: number) => {
+    setCurrent(index);
+  };
+
   return (
     <div
+      style={{ overflowY: "auto", overscrollBehavior: "contain" }}
+      onWheel={handleWheel}
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
-      className=" mt-10   "
+      className=" mt-10 overscroll-contain "
     >
       <Slider
         {...settings}
         ref={(slider: any) => {
           sliderRef = slider;
         }}
+        afterChange={handleAfterChange}
       >
         {content.map((item, index) => {
           return (

@@ -1,15 +1,15 @@
 const ecosystemMenus = [
   {
     text: "Build",
-    content: "Build the Web3 you want, BitcoinZK builds the trust.",
+    content: "Get guidance for building dapps on BitcoinZK",
   },
   {
     text: "L2 Explorer",
-    content: "Build the Web3 you want, BitcoinZK builds the trust.",
+    content: "Find, sort and track transcations, blocks, addresses and tokens",
   },
   {
     text: "Dapps",
-    content: "Build the Web3 you want, BitcoinZK builds the trust.",
+    content: "Discover De-Fi and other applications available on BitcoinZK",
   },
 ];
 

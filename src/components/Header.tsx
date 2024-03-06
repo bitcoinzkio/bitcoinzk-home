@@ -5,8 +5,6 @@ import { ColorSchemeContext } from "@/utils/context";
 import { ecosystemMenus } from "@/utils/constant";
 
 const Header = () => {
-  const color = useContext(ColorSchemeContext) === "light";
-
   return (
     <div className="flex mt-[22px] justify-between px-10  z-20 mo:justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px] ">
       <div className="justify-start flex">
@@ -26,11 +24,9 @@ const Header = () => {
             menus={ecosystemMenus}
             keys={"text"}
             isShowText={true}
-            // chooseItem={(e) => onChoose(e)}
             className="absolute z-[9999]"
           >
             <button className="text-[2rem] mo:text-2xl flex flex-row items-center gap-[6px]">
-              {/* <span className=" text-[15px]">{chooseCategorie.name}</span> */}
               <Icon name={"downArrow"} color="black" />
             </button>
           </PoperMenu>

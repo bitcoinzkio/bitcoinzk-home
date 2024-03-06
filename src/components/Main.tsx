@@ -1,6 +1,61 @@
 import Icon from "@/images";
+import { useEffect } from "react";
 
 const Main = () => {
+  const carouselText = [
+    { text: "Zero-knowledge", color: "red" },
+    { text: "Proof-of-liquidity", color: "orange" },
+  ];
+
+  async function typeSentence(sentence: any, delay = 100) {
+    const letters = sentence.split("");
+    let i = 0;
+    while (i < letters.length) {
+      await waitForMs(delay);
+      document.getElementById("bitTitle")?.append(letters[i]);
+      i++;
+    }
+    return;
+  }
+
+  async function deleteSentence() {
+    const ht: any = document.getElementById("bitTitle");
+    console.log("htht", ht);
+
+    const sentence = ht.innerHTML;
+    const letters = sentence.split("");
+    while (letters.length > 0) {
+      await waitForMs(100);
+      letters.pop();
+      ht.innerHTML = letters.join("");
+    }
+  }
+
+  async function carousel(carouselList: any[]) {
+    var i = 0;
+    while (true) {
+      await typeSentence(carouselList[i].text);
+      await waitForMs(2000);
+      await deleteSentence();
+      await waitForMs(1000);
+      i++;
+      if (i >= carouselList.length) {
+        i = 0;
+      }
+    }
+  }
+
+  function waitForMs(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  useEffect(() => {
+    carousel(carouselText);
+    return () => {
+      document.getElementById("bitTitle")?.remove();
+    };
+  }, []);
+
   return (
     <div data-aos="fade-up" className="mainBg aos-init aos-animate  ">
       <div
@@ -19,8 +74,12 @@ const Main = () => {
                 BITCOIN
               </div>
             </div>
-            <div className="text-[80px] font-bold text-center font-hn">
-              Zero-knowle
+            <div className="text-center">
+              <span
+                id="bitTitle"
+                className="font-hn font-bold text-[80px] leading-[80px]"
+              ></span>
+              <span className="input-cursor"></span>
             </div>
             <div className="flex justify-center gap-5 mt-[58px] font-le ">
               <div className="text-xl gap-2 font-le bg-[#000000] text-white w-52 h-14 flex items-center justify-center rounded-[10px]">

@@ -31,7 +31,7 @@ const Testnet = () => {
           backgroundSize: "30px 1px, 30px 1px, 30px 9px, 1px 9px",
         }}
       >
-        <div className="  bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center ">
+        <div className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center ">
           <div className=" flex-col flex justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto container md:w-full md:px-[30px] ">
             <div className=" font-le text-2xl font-light text-white  text-center ">
               We are glad to announce our Maxwell testnet with key features and
