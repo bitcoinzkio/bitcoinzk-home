@@ -23,6 +23,7 @@ const config: Config = {
         lg: { min: "90rem" },
         mo: { max: "900px" },
         md: [{ min: "900px", max: "1280px" }],
+        bmd: [{ min: "900px", max: "950px" }],
       },
       width: {
         container: "1280px",
