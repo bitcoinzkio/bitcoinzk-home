@@ -20,7 +20,6 @@ const Main = () => {
 
   async function deleteSentence() {
     const ht: any = document.getElementById("bitTitle");
-    console.log("htht", ht);
 
     const sentence = ht.innerHTML;
     const letters = sentence.split("");
@@ -56,6 +55,13 @@ const Main = () => {
     };
   }, []);
 
+  const dealPrice = (price: number) => {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(price);
+  };
+
   return (
     <div data-aos="fade-up" className="mainBg aos-init aos-animate  ">
       <div
@@ -63,21 +69,21 @@ const Main = () => {
           "mx-auto w-container px-10 md:w-full md:px-[30px] bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat "
         }
       >
-        <div className="flex  justify-center pt-[140px]">
-          <div className=" flex flex-col  ">
+        <div className="flex  justify-center pt-[140px] ">
+          <div className=" flex flex-col   ">
             <div className="flex items-center gap-5 font-hn">
-              <span className=" text-[#7622FF] text-[80px] font-bold ">
+              <span className=" text-[#7622FF] text-[80px] md:text-[50px] font-bold ">
                 ZK LAYER2
               </span>
               <Icon name={"flow"} />
-              <div className="text-[#FDA805]  flex items-center text-[80px] font-bold  bg-[url(/IconBorderY.svg)]  w-[226px] h-[177px]  bg-cover object-cover bg-repeat ">
+              <div className="text-[#FDA805]  flex items-center text-[80px] md:text-[50px] font-bold  bg-[url(/IconBorderY.svg)]  w-[226px] h-[177px]  bg-cover object-cover bg-repeat ">
                 BITCOIN
               </div>
             </div>
-            <div className="text-center">
+            <div className="">
               <span
                 id="bitTitle"
-                className="font-hn font-bold text-[80px] leading-[80px]"
+                className="font-hn font-bold text-[80px] md:text-[50px] leading-[80px]"
               ></span>
               <span className="input-cursor"></span>
             </div>
@@ -110,15 +116,17 @@ const Main = () => {
                 <Icon name="nStar" color="#7622FF" />
                 <Icon name="nStar" color="#7622FF" />
               </div>
-              <div className="text-[#7622FF] text-[28px] mt-[6px]">
-                $ 20.195.021.46
+              <div className="text-[#7622FF] text-[28px] mt-[6px] font-le">
+                $ 20,195,021,46
               </div>
             </div>
           </div>
           <div className="bg-[url(/IconBorderB.svg)] w-[226px] h-[177px]  bg-cover object-cover bg-repeat flex text-center items-center justify-center">
             <div>
-              <div className=" text-base font-le">Real-time TVL</div>
-              <div className="border w-[200px] my-5" />
+              <div className=" text-base font-le">
+                Real-time Bitcoin Deposit
+              </div>
+              <div className="border w-[200px] my-5 border-black" />
               <div className="flex justify-between">
                 <Icon name="nStar" />
                 <Icon name="nStar" />
@@ -126,7 +134,9 @@ const Main = () => {
                 <Icon name="nStar" />
                 <Icon name="nStar" />
               </div>
-              <div className=" text-[28px] mt-[6px]">$ 20.195.021.46</div>
+              <div className=" text-[28px] mt-[6px]  font-le">
+                $ 20,195,021,46
+              </div>
             </div>
           </div>
         </div>

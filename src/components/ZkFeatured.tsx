@@ -2,10 +2,9 @@ import Icon from "@/images";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const ZkFeatured = () => {
   let sliderRef = useRef<any>(null);
-  const [disableOuterScroll, setDisableOuterScroll] = useState(false);
 
   const [current, setCurrent] = useState(0);
   const settings = {
@@ -129,13 +128,15 @@ const ZkFeatured = () => {
     setCurrent(i);
   };
 
+  useEffect(() => {
+    // document.body.style.overflow = "hidden";
+  }, []);
+
   const handleWheel = (event: {
     deltaY: any;
     preventDefault: () => void;
     stopPropagation: () => void;
   }) => {
-    document.body.style.overflow = "hidden";
-
     const deltaY = event.deltaY;
 
     if (deltaY > 0) {
@@ -164,100 +165,105 @@ const ZkFeatured = () => {
   };
 
   return (
-    <div
-      style={{ overflowY: "auto", overscrollBehavior: "contain" }}
-      onWheel={handleWheel}
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom"
-      className=" mt-10 overscroll-contain "
-    >
-      <Slider
-        {...settings}
-        ref={(slider: any) => {
-          sliderRef = slider;
-        }}
-        afterChange={handleAfterChange}
+    <>
+      <div
+        id="myBar"
+        onWheel={handleWheel}
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        className={` mt-10 overscroll-contain 
+          `}
       >
-        {content.map((item, index) => {
-          return (
-            <div key={`slider${index}`} className="!flex ">
-              <div className=" bg-[#7622FF] w-[50%] flex justify-center items-center  py-[110px]">
-                <div className=" ">
-                  <div className="bg-[url(/borderLine.svg)] bg-cover object-cover bg-repeat w-[580px] h-[580px] ">
-                    <div className="flex justify-center items-center w-full h-full">
-                      {item.img}
+        <Slider
+          {...settings}
+          ref={(slider: any) => {
+            sliderRef = slider;
+          }}
+          afterChange={handleAfterChange}
+        >
+          {content.map((item, index) => {
+            return (
+              <div key={`slider${index}`} className="!flex split-section ">
+                <div className=" bg-[#7622FF] w-[40%] flex justify-center items-center  py-[110px] ecosystem-left">
+                  <div className=" ">
+                    <div className="bg-[url(/borderLine.svg)] bg-cover object-cover bg-repeat w-[580px] h-[580px] ">
+                      <div className="flex justify-center items-center w-full h-full">
+                        {item.img}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className=" bg-[#000000] w-[50%] font-le text-white ">
-                <div className=" flex justify-end flex-wrap  items-center mt-[60px] mr-[60px]  text-sm font-light ">
-                  <div className=" gap-[10px] flex mr-5">
-                    <button
-                      onClick={onPrev}
-                      disabled={current === 0}
-                      className={`${
-                        current === 0 ? "cursor-not-allowed" : " cursor-pointer"
-                      }`}
-                    >
-                      <Icon
-                        name={"leftArrow"}
-                        color={current === 0 ? "#333333" : "#7622FF"}
-                      />
-                    </button>
-                    <button
-                      onClick={onNext}
-                      className={`${
-                        current + 1 === maxSlides
-                          ? "cursor-not-allowed"
-                          : " cursor-pointer"
-                      }`}
-                      disabled={current + 1 === maxSlides}
-                    >
-                      <Icon
-                        name={"rightArrow"}
-                        color={
-                          current + 1 === maxSlides ? "#333333" : "#7622FF"
-                        }
-                      />
-                    </button>
+                <div className=" bg-[#000000] w-[60%] font-le text-white diagram-right">
+                  <div className=" flex justify-end flex-wrap  items-center mt-[60px] mr-[60px]  text-sm font-light ">
+                    <div className=" gap-[10px] flex mr-5">
+                      <button
+                        onClick={onPrev}
+                        disabled={current === 0}
+                        className={`${
+                          current === 0
+                            ? "cursor-not-allowed"
+                            : " cursor-pointer"
+                        }`}
+                      >
+                        <Icon
+                          name={"leftArrow"}
+                          color={current === 0 ? "#333333" : "#7622FF"}
+                        />
+                      </button>
+                      <button
+                        onClick={onNext}
+                        className={`${
+                          current + 1 === maxSlides
+                            ? "cursor-not-allowed"
+                            : " cursor-pointer"
+                        }`}
+                        disabled={current + 1 === maxSlides}
+                      >
+                        <Icon
+                          name={"rightArrow"}
+                          color={
+                            current + 1 === maxSlides ? "#333333" : "#7622FF"
+                          }
+                        />
+                      </button>
+                    </div>
+                    <div className="flex gap-3">
+                      {[...Array(content.length)].map((_, i) => {
+                        return (
+                          <div
+                            key={`num${i}`}
+                            onClick={() => onClickTo(i)}
+                            className={` rounded-md ${
+                              current === i
+                                ? "bg-[#7622FF]"
+                                : "border-white border"
+                            }  w-[62px] h-[32px] flex items-center justify-center`}
+                          >
+                            / 0{i + 1}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                  <div className="flex gap-3">
-                    {[...Array(content.length)].map((_, i) => {
-                      return (
-                        <div
-                          key={`num${i}`}
-                          onClick={() => onClickTo(i)}
-                          className={` rounded-md ${
-                            current === i
-                              ? "bg-[#7622FF]"
-                              : "border-white border"
-                          }  w-[62px] h-[32px] flex items-center justify-center`}
-                        >
-                          / 0{i + 1}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
 
-                <div className=" flex w-full h-full mt-[50px]">
-                  <div className="flex flex-col mx-[100px] ">
-                    <div className=" flex items-center flex-row ">
-                      <Icon name={"expand"} />
-                      <span className=" ml-3 font-bold text-[40px] md:text-2xl">
-                        {item.title}
-                      </span>
+                  <div className=" flex w-full h-full mt-[50px]">
+                    <div className="flex flex-col mx-[100px] ">
+                      <div className=" flex items-center flex-row ">
+                        <Icon name={"expand"} />
+                        <span className=" ml-3 font-bold text-[48px] md:text-3xl">
+                          {item.title}
+                        </span>
+                      </div>
+                      {item.content}
                     </div>
-                    {item.content}
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </Slider>
-    </div>
+            );
+          })}
+        </Slider>
+      </div>
+    </>
   );
 };
 

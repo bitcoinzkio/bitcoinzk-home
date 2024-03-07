@@ -1,5 +1,4 @@
 import Icon from "@/images";
-import { DivBox, Wrapper } from "./StyleButton";
 
 const Testnet = () => {
   return (
@@ -63,18 +62,20 @@ const Testnet = () => {
         <div
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
-          className="bg-[url(/prupleBg.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center justify-center "
+          className="bg-[url(/prupleBg.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center justify-end"
         >
-          <div className=" font-le text-2xl  text-white font-light  ">
-            <div className=" flex items-center">
-              {"//"} If you are a BTC user, go to this
-              <span className="font-semibold ml-3"> Bridge page </span>
-              <div className=" mx-3">
-                <Icon name="arrowN" />
+          <div className=" w-container mx-auto md:mx-[30px] ">
+            <div className=" font-le text-2xl  text-white font-light flex justify-end   ">
+              <div className=" flex items-center">
+                {"//"} If you are a BTC user, go to this
+                <span className="font-semibold ml-3"> Bridge page </span>
+                <div className=" mx-3">
+                  <Icon name="arrowN" />
+                </div>
+                for testing out
               </div>
-              for testing out
             </div>
-            <div className="flex justify-center ">
+            <div className="font-le text-2xl  text-white font-light  flex justify-end ">
               asset bridging between L1 and L2.
             </div>
           </div>
