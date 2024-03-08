@@ -18,6 +18,9 @@ const ZkFeatured = () => {
     verticalSwiping: true,
     swipeToSlide: true,
     cssEase: "linear",
+    // fade: true,
+    speed: 1000,
+    infinite: true,
   };
 
   const content = [
