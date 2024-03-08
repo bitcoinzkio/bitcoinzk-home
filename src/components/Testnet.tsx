@@ -64,7 +64,7 @@ const Testnet = () => {
           data-aos-anchor-placement="top-bottom"
           className="bg-[url(/prupleBg.png)] bg-cover object-cover bg-repeat h-[200px]  flex items-center justify-end"
         >
-          <div className=" w-container mx-auto md:mx-[30px] ">
+          <div className=" w-container mx-auto md:mx-[40px] ">
             <div className=" font-le text-2xl  text-white font-light flex justify-end   ">
               <div className=" flex items-center">
                 {"//"} If you are a BTC user, go to this

@@ -72,18 +72,18 @@ const Main = () => {
         <div className="flex  justify-center pt-[140px] ">
           <div className=" flex flex-col   ">
             <div className="flex items-center gap-5 font-hn">
-              <span className=" text-[#7622FF] text-[80px] md:text-[50px] bmd:text-[43px] font-bold ">
+              <span className=" text-[#7622FF] text-[80px] md:text-[45px] bmd:text-[36px] font-bold ">
                 ZK LAYER2
               </span>
               <Icon name={"flow"} />
-              <div className="text-[#FDA805]  flex items-center text-[80px] md:text-[50px]  bmd:text-[43px] font-bold  bg-[url(/IconBorderY.svg)]  w-[226px] h-[177px]  bg-cover object-cover bg-repeat ">
+              <div className="text-[#FDA805]  flex items-center text-[80px] md:text-[45px]  bmd:text-[36px] font-bold  bg-[url(/IconBorderY.svg)]  w-[226px] h-[177px]  bg-cover object-cover bg-repeat ">
                 BITCOIN
               </div>
             </div>
             <div className="">
               <span
                 id="bitTitle"
-                className="font-hn font-bold text-[80px] md:text-[50px] leading-[80px] bmd:text-[43px]"
+                className="font-hn font-bold text-[80px] md:text-[45px] leading-[80px] bmd:text-[36px]"
               ></span>
               <span className="input-cursor"></span>
             </div>
