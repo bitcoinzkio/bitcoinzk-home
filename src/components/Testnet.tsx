@@ -5,12 +5,12 @@ const Testnet = () => {
     <>
       <img
         src="./IconLine1.svg"
-        className=" absolute  right-[100px] z-10 mt-[30px]"
+        className=" absolute  right-[100px] z-10 mt-[100px]"
       />
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
-        className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center  "
+        className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[200px]  flex items-center  "
       >
         <div className=" font-le h-[80px] text-[58px] items-center font-medium gap-5 text-white flex mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
           <div className=" text-sm relative top-[-12px]">{"//"}</div>
@@ -34,7 +34,7 @@ const Testnet = () => {
           backgroundSize: "30px 1px, 30px 1px, 30px 9px, 1px 9px",
         }}
       >
-        <div className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center ">
+        <div className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[200px]  flex items-center ">
           <div className=" flex-col flex  mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px] ">
             <div className=" font-le text-2xl font-light text-white  ">
               {"//"} We are glad to announce our Maxwell testnet with key
@@ -62,7 +62,7 @@ const Testnet = () => {
         <div
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
-          className="bg-[url(/prupleBg.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center justify-end"
+          className="bg-[url(/prupleBg.png)] bg-cover object-cover bg-repeat h-[200px]  flex items-center justify-end"
         >
           <div className=" w-container mx-auto md:mx-[30px] ">
             <div className=" font-le text-2xl  text-white font-light flex justify-end   ">
@@ -85,7 +85,7 @@ const Testnet = () => {
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
-        className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[130px]  flex items-center  "
+        className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[200px]  flex items-center  "
       >
         <div className=" font-le text-[24px] font-light  text-white  flex items-center  mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
           {"//"} If you are a developer, go to this{" "}

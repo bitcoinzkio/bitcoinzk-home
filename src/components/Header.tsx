@@ -1,7 +1,5 @@
 import Icon from "@/images";
 import { PoperMenu } from "./Poper";
-import { useContext } from "react";
-import { ColorSchemeContext } from "@/utils/context";
 import { ecosystemMenus } from "@/utils/constant";
 
 const Header = () => {
@@ -31,9 +29,9 @@ const Header = () => {
             </button>
           </PoperMenu>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 text-lg">
           <span>Bridge</span>
-          <Icon name={"arrow"} />
+          <Icon name={"arrow"} color="black" />
         </div>
         <div>
           <Icon name={"x"} />

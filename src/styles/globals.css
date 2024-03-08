@@ -64,15 +64,13 @@
 
 
 
-#bitTitle {
-  margin-left: 8px;
-}
+
 
 .input-cursor {
   display: inline-block;
   width: 2px;
   height: 80px;
-  background-color: white;
+  background-color: black;
   margin-left: 8px;
   animation: blink .10s linear infinite alternate;
 }
@@ -98,3 +96,41 @@
   top: 0;
 }
 
+
+
+.containers {
+  height: 300px; /* 滚动容器的高度 */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory; /* 纵向滚动，吸附滚动 */
+}
+.content {
+  height: 400px; /* 内容块的高度，确保大于滚动容器的高度 */
+  scroll-snap-align: start; /* 吸附到顶部 */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.content:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+.content:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+
+#progress-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 8px; /* 进度条宽度 */
+  background-color: #7622FF;
+  z-index: 9999; /* 保证在最上层 */
+}
+#progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4caf50; /* 进度条颜色 */
+  transition: height 0.2s ease; /* 过渡效果 */
+}

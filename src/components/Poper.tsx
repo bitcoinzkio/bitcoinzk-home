@@ -4,6 +4,7 @@ import React, { Fragment, HTMLAttributes, useState } from "react";
 import { RxTriangleUp } from "react-icons/rx";
 import { useClickAway, useToggle } from "react-use";
 import { useRouter } from "next/navigation";
+import Icon from "@/images";
 
 export interface MenuItem {
   topSplit?: boolean;
@@ -111,8 +112,9 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
                     <div className="text-xl mo:text-2xl">{item.icon}</div>
                   )}
                   <div className=" flex flex-col">
-                    <div className=" text-sm font-bold  font-ns mo:text-base mo:font-normal">
-                      {item[keys]}
+                    <div className=" text-sm font-bold  font-ns mo:text-base mo:font-normal flex items-center gap-2">
+                      {item[keys]}{" "}
+                      {i === 2 ? null : <Icon name={"arrow"} color="black" />}
                     </div>
                     <div className="w-auto text-xs font-ns ">
                       {item.content}
