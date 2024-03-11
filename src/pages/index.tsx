@@ -5,10 +5,9 @@ import Main from "@/components/Main";
 import Road from "@/components/Road";
 import Testnet from "@/components/Testnet";
 import ZkFeatured from "@/components/ZkFeatured";
-import Swipe from "@/components/swipe";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
@@ -33,25 +32,6 @@ export default function Home() {
     });
   });
 
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  // 获取鼠标位置的函数
-  function handleMouseMove(event) {
-    setPosition({ x: window.pageXOffset, y: window.pageYOffset });
-  }
-
-  // 添加鼠标移动事件监听器
-  useEffect(() => {
-    window.addEventListener("scroll", handleMouseMove);
-
-    // 清除事件监听器
-    return () => {
-      window.removeEventListener("scroll", handleMouseMove);
-    };
-  }, [position]); // 只在组件挂载和卸载时执行
-
-  console.log("position", position);
-
   return (
     <div id="outer-container" className="pg-container">
       <div className="mainBg">
@@ -61,10 +41,7 @@ export default function Home() {
       <ZkFeatured />
       <Testnet />
       <Featured />
-
       <Road />
-      {/* <Swipe /> */}
-
       <Footer />
     </div>
   );
