@@ -1,4 +1,5 @@
 import Icon from "@/images";
+import { bridgeUrl, docUrl } from "@/utils/constant";
 import { useEffect } from "react";
 
 const Main = () => {
@@ -19,9 +20,9 @@ const Main = () => {
   }
 
   async function deleteSentence() {
-    const ht: any = document.getElementById("bitTitle");
+    const ht: any = document.getElementById("bitTitle") || "";
 
-    const sentence = ht.innerHTML;
+    const sentence = ht?.innerHTML;
     const letters = sentence.split("");
     while (letters.length > 0) {
       await waitForMs(100);
@@ -62,8 +63,12 @@ const Main = () => {
     }).format(price);
   };
 
+  const onLink = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   return (
-    <div data-aos="fade-up" className="mainBg aos-init aos-animate  ">
+    <div data-aos="fade-up" className=" aos-init aos-animate  ">
       <div
         className={
           "mx-auto w-container px-10 md:w-full md:px-[30px] bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat "
@@ -88,14 +93,20 @@ const Main = () => {
               <span className="input-cursor"></span>
             </div>
             <div className="flex justify-center gap-5 mt-[58px] font-le ">
-              <div className="text-xl gap-2 font-le bg-[#000000] text-white w-52 h-14 flex items-center justify-center rounded-[10px]">
+              <button
+                onClick={() => onLink(docUrl)}
+                className="text-xl gap-2 font-le bg-[#000000] text-white w-52 h-14 flex items-center justify-center rounded-[10px]"
+              >
                 <Icon name={"star"} />
                 Read Docs.
-              </div>
-              <div className=" text-xl font-le gap-[11px] border-[#7622FF] border text-[#7622FF] w-52 h-14 flex items-center justify-center  rounded-[10px]">
+              </button>
+              <button
+                onClick={() => onLink(bridgeUrl)}
+                className=" text-xl font-le gap-[11px] border-[#7622FF] border text-[#7622FF] w-52 h-14 flex items-center justify-center  rounded-[10px]"
+              >
                 <Icon name={"jump"} />
                 Bridge BTC
-              </div>
+              </button>
             </div>
           </div>
           <div className=" mt-[100px] ml-40">
@@ -117,7 +128,7 @@ const Main = () => {
                 <Icon name="nStar" color="#7622FF" />
               </div>
               <div className="text-[#7622FF] text-[28px] mt-[6px] font-le">
-                $ 20,195,021,46
+                $ 20,195,021.<span className="text-[#C5A0ff]">46</span>
               </div>
             </div>
           </div>
@@ -135,7 +146,7 @@ const Main = () => {
                 <Icon name="nStar" />
               </div>
               <div className=" text-[28px] mt-[6px]  font-le">
-                $ 20,195,021,46
+                $ 20,195,021.<span className="text-[#9A9A9A]">46</span>
               </div>
             </div>
           </div>

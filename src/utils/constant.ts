@@ -13,4 +13,8 @@ const ecosystemMenus = [
   },
 ];
 
-export { ecosystemMenus };
+const docUrl = "https://docs.bitcoinzk.io/";
+const bridgeUrl = "https://bridge-devnet.bitcoinzk.io/";
+const explorerUrl = "https://explorer-devnet.bitcoinzk.io/";
+
+export { ecosystemMenus, docUrl, bridgeUrl, explorerUrl };

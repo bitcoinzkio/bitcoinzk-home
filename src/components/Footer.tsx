@@ -1,6 +1,10 @@
 import Icon from "@/images";
+import { bridgeUrl, docUrl, explorerUrl } from "@/utils/constant";
 
 const Footer = () => {
+  const onLink = (url: string) => {
+    window.open(url, "_blank");
+  };
   return (
     <>
       <div className=" bg-white px-[30px] font-le h-[115px] mt-[50px] flex items-center border-b-[1px]">
@@ -23,10 +27,22 @@ const Footer = () => {
                 <span>Twitter</span>
                 <span>Discord</span>
               </div>
-              <div className=" flex flex-col gap-[10px] ">
-                <span>Documentations</span>
-                <span>L2 Explorer</span>
-                <span>Bridge</span>
+              <div className=" flex flex-col gap-[10px]  text-left ">
+                <button className=" text-left" onClick={() => onLink(docUrl)}>
+                  Documentations
+                </button>
+                <button
+                  className=" text-left"
+                  onClick={() => onLink(explorerUrl)}
+                >
+                  L2 Explorer
+                </button>
+                <button
+                  className=" text-left"
+                  onClick={() => onLink(bridgeUrl)}
+                >
+                  Bridge
+                </button>
               </div>
             </div>
           </div>

@@ -33,8 +33,10 @@ export default function Home() {
   });
   return (
     <div>
-      <Header />
-      <Main />
+      <div className="mainBg">
+        <Header />
+        <Main />
+      </div>
       <ZkFeatured />
       <Testnet />
       <Featured />

@@ -39,7 +39,7 @@ const ZkFeatured = () => {
             100% layer2 behaviors will be
             <span className=" font-bold"> provable</span> by ZK-SANRKS, and 100%
             ZK proofs will be
-            <span className=" font-bold">verifiable</span> by the public.
+            <span className=" font-bold"> verifiable</span> by the public.
           </div>
           <div className=" font-light text-xl mt-6">
             Don’t trust, just verify.

@@ -28,12 +28,12 @@
 
 
 .mainBg::after {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   content: '';
   width: 100%;
-  height: 50%;
+  height: 100%;
   background-image: linear-gradient(
       0deg,
       #7622FF 0px,

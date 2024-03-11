@@ -1,8 +1,11 @@
 import Icon from "@/images";
 import { PoperMenu } from "./Poper";
-import { ecosystemMenus } from "@/utils/constant";
+import { bridgeUrl, docUrl, ecosystemMenus } from "@/utils/constant";
 
 const Header = () => {
+  const onLink = (link: string) => {
+    window.open(link, "_blank");
+  };
   return (
     <div className="flex mt-[22px] justify-between px-10  z-20 mo:justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px] ">
       <div className="justify-start flex">
@@ -10,10 +13,13 @@ const Header = () => {
       </div>
       <div className="flex gap-[50px]">
         <div className={` rounded-[10px] items-center flex bg-[#000000] `}>
-          <div className={` mx-[15px] flex items-center gap-2  `}>
+          <button
+            onClick={() => onLink(docUrl)}
+            className={` mx-[15px] flex items-center gap-2  `}
+          >
             <span className=" text-lg text-white">Docs</span>
             <Icon name={"arrow"} color="white" />
-          </div>
+          </button>
         </div>
         <div className=" flex items-center text-lg gap-2 ">
           <span>Ecosystem</span>
@@ -29,10 +35,13 @@ const Header = () => {
             </button>
           </PoperMenu>
         </div>
-        <div className="flex items-center gap-2 text-lg">
+        <button
+          onClick={() => onLink(bridgeUrl)}
+          className="flex items-center gap-2 text-lg"
+        >
           <span>Bridge</span>
           <Icon name={"arrow"} color="black" />
-        </div>
+        </button>
         <div>
           <Icon name={"x"} />
         </div>

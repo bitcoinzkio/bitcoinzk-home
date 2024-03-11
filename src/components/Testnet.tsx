@@ -1,6 +1,10 @@
 import Icon from "@/images";
+import { bridgeUrl, docUrl } from "@/utils/constant";
 
 const Testnet = () => {
+  const onLink = (link: string) => {
+    window.open(link, "_blank");
+  };
   return (
     <>
       <img
@@ -68,7 +72,13 @@ const Testnet = () => {
             <div className=" font-le text-2xl  text-white font-light flex justify-end   ">
               <div className=" flex items-center">
                 {"//"} If you are a BTC user, go to this
-                <span className="font-semibold ml-3"> Bridge page </span>
+                <button
+                  onClick={() => onLink(bridgeUrl)}
+                  className="font-semibold ml-3"
+                >
+                  {" "}
+                  Bridge page{" "}
+                </button>
                 <div className=" mx-3">
                   <Icon name="arrowN" />
                 </div>
@@ -89,7 +99,12 @@ const Testnet = () => {
       >
         <div className=" font-le text-[24px] font-light  text-white  flex items-center  mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
           {"//"} If you are a developer, go to this{" "}
-          <span className=" font-semibold ml-3">Build Docs</span>
+          <button
+            onClick={() => onLink(docUrl)}
+            className=" font-semibold ml-3"
+          >
+            Build Docs
+          </button>
           <div className=" mx-3">
             <Icon name="arrowN" />
           </div>

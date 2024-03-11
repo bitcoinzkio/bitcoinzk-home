@@ -70,7 +70,6 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
       </div>
       {show && menus.length > 0 && (
         <div
-          data-aos="fade-down"
           style={{ filter: "drop-shadow(0 0 15px rgba(0, 0, 0, 0.2))" }}
           className={classNames(
             "absolute w-[13.75rem] top-full right-[-115px] mo:right-[-1rem]",
