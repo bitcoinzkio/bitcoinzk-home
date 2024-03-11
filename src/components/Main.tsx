@@ -4,11 +4,11 @@ import { useEffect } from "react";
 
 const Main = () => {
   const carouselText = [
-    { text: "Zero-knowledge", color: "red" },
-    { text: "Proof-of-liquidity", color: "orange" },
+    { text: "Zero-knowledge" },
+    { text: "Proof-of-liquidity" },
   ];
 
-  async function typeSentence(sentence: any, delay = 100) {
+  async function typeSentence(sentence: string, delay = 100) {
     const letters = sentence.split("");
     let i = 0;
     while (i < letters.length) {
@@ -20,7 +20,7 @@ const Main = () => {
   }
 
   async function deleteSentence() {
-    const ht: any = document.getElementById("bitTitle") || "";
+    const ht = document.getElementById("bitTitle") as HTMLElement;
 
     const sentence = ht?.innerHTML;
     const letters = sentence.split("");
@@ -31,7 +31,7 @@ const Main = () => {
     }
   }
 
-  async function carousel(carouselList: any[]) {
+  async function carousel(carouselList: { text: string }[]) {
     var i = 0;
     while (true) {
       await typeSentence(carouselList[i].text);

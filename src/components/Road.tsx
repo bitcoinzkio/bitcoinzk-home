@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Road = () => {
   const [isHover, setIsHover] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState<any>(null);
+  const [currentIndex, setCurrentIndex] = useState<null | number>(null);
 
   const content = [
     {

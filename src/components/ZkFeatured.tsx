@@ -174,7 +174,7 @@ const ZkFeatured = () => {
         onWheel={handleWheel}
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
-        className={` mt-10 overscroll-contain 
+        className={` mt-10 scrollable-content
           `}
       >
         <Slider
@@ -250,7 +250,7 @@ const ZkFeatured = () => {
                   </div>
 
                   <div className=" flex w-full h-full mt-[50px]">
-                    <div className="flex flex-col mx-[90px] md:mx-[50px]  ">
+                    <div className="flex flex-col mx-[80px] md:mx-[50px]  ">
                       <div className=" flex items-center flex-row ">
                         <Icon name={"expand"} />
                         <span className=" ml-3 font-bold text-[48px] md:text-3xl">
