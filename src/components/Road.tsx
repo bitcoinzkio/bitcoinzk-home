@@ -30,7 +30,7 @@ const Road = () => {
     <div
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
-      className=" mt-20   font-le flex  justify-center mo:mx-10   mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]"
+      className=" mt-20  px-10  font-le flex  justify-center mo:mx-10   mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]"
     >
       <div className=" flex justify-between gap-5  ">
         {content.map((item, index) => {

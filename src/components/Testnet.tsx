@@ -1,22 +1,26 @@
+/* eslint-disable @next/next/no-img-element */
 import Icon from "@/images";
 import { bridgeUrl, docUrl } from "@/utils/constant";
+import { useEffect } from "react";
 
 const Testnet = () => {
   const onLink = (link: string) => {
     window.open(link, "_blank");
   };
+
   return (
     <>
       <img
         src="./IconLine1.svg"
-        className=" absolute  right-[100px] z-10 mt-[100px]"
+        className=" absolute right-[100px] z-10 mt-[100px]"
+        alt=""
       />
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[200px]  flex items-center  "
       >
-        <div className=" font-le h-[80px] text-[58px] items-center font-medium gap-5 text-white flex mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
+        <div className=" font-le px-10 h-[80px] text-[58px] items-center font-medium gap-5 text-white flex mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
           <div className=" text-sm relative top-[-12px]">{"//"}</div>
           <div className=" items-baseline ">
             <span className=" "> BitcoinZK</span>
@@ -39,7 +43,7 @@ const Testnet = () => {
         }}
       >
         <div className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[200px]  flex items-center ">
-          <div className=" flex-col flex  mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px] ">
+          <div className=" flex-col flex px-10  mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px] ">
             <div className=" font-le text-2xl font-light text-white  ">
               {"//"} We are glad to announce our Maxwell testnet with key
               features and components
@@ -68,7 +72,7 @@ const Testnet = () => {
           data-aos-anchor-placement="top-bottom"
           className="bg-[url(/prupleBg.png)] bg-cover object-cover bg-repeat h-[200px]  flex items-center justify-end"
         >
-          <div className=" w-container mx-auto md:mx-[40px] ">
+          <div className=" w-container mx-auto md:mx-[40px] px-10 ">
             <div className=" font-le text-2xl  text-white font-light flex justify-end   ">
               <div className=" flex items-center">
                 {"//"} If you are a BTC user, go to this
@@ -97,7 +101,7 @@ const Testnet = () => {
         data-aos-anchor-placement="top-bottom"
         className="bg-[url(/IconDiv.png)] bg-cover object-cover bg-repeat h-[200px]  flex items-center  "
       >
-        <div className=" font-le text-[24px] font-light  text-white  flex items-center  mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
+        <div className=" font-le text-[24px] font-light px-10  text-white  flex items-center  mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px]">
           {"//"} If you are a developer, go to this{" "}
           <button
             onClick={() => onLink(docUrl)}

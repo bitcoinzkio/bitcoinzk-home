@@ -1,30 +1,32 @@
 import Icon from "@/images";
 import { PoperMenu } from "./Poper";
 import { bridgeUrl, docUrl, ecosystemMenus } from "@/utils/constant";
+import React from "react";
 
 const Header = () => {
   const onLink = (link: string) => {
     window.open(link, "_blank");
   };
+
   return (
-    <div className="flex mt-[22px] justify-between px-10  z-20 mo:justify-center mo:mx-10  mo:flex-wrap mo:w-full  mx-auto w-container md:w-full md:px-[30px] ">
+    <div className="flex pt-[21px]  justify-between px-10 z-20 mo:justify-center mo:mx-10 mo:flex-wrap mo:w-full mx-auto w-container md:w-full md:px-[30px]">
       <div className="justify-start flex">
         <Icon name={"logo"} />
       </div>
       <div className="flex gap-[50px]">
-        <div className={` rounded-[10px] items-center flex bg-[#000000] `}>
+        <div className={`rounded-[10px] items-center flex bg-[#000000]`}>
           <button
             onClick={() => onLink(docUrl)}
-            className={` mx-[15px] flex items-center gap-2  `}
+            className={`mx-[15px] flex items-center gap-2`}
           >
-            <span className=" text-lg text-white">Docs</span>
+            <span className="text-lg text-white">Docs</span>
             <Icon name={"arrow"} color="white" />
           </button>
         </div>
-        <div className=" flex items-center text-lg gap-2 ">
+        <div className="flex items-center text-lg gap-2 ">
           <span>Ecosystem</span>
           <PoperMenu
-            containerClassName={"!w-[350px] mo:!right-[-110px]"}
+            containerClassName={"!w-[320px] mo:!right-[-110px]"}
             menus={ecosystemMenus}
             keys={"text"}
             isShowText={true}
@@ -42,11 +44,13 @@ const Header = () => {
           <span>Bridge</span>
           <Icon name={"arrow"} color="black" />
         </button>
-        <div>
-          <Icon name={"x"} />
-        </div>
-        <div>
-          <Icon name={"tg"} />
+        <div className="flex gap-5">
+          <div>
+            <Icon name={"x"} />
+          </div>
+          <div>
+            <Icon name={"tg"} />
+          </div>
         </div>
       </div>
     </div>

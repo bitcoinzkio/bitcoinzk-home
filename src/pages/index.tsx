@@ -5,9 +5,10 @@ import Main from "@/components/Main";
 import Road from "@/components/Road";
 import Testnet from "@/components/Testnet";
 import ZkFeatured from "@/components/ZkFeatured";
+import Swipe from "@/components/swipe";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   useEffect(() => {
@@ -34,11 +35,13 @@ export default function Home() {
 
   return (
     <div id="outer-container" className="pg-container">
-      <div className="mainBg">
+      <div className="mainBg bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat ">
         <Header />
         <Main />
       </div>
       <ZkFeatured />
+      {/* <Swipe /> */}
+
       <Testnet />
       <Featured />
       <Road />

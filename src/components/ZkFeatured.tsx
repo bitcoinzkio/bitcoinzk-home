@@ -2,10 +2,9 @@ import Icon from "@/images";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useRef, useState } from "react";
+import React, { WheelEventHandler, useEffect, useRef, useState } from "react";
 const ZkFeatured = () => {
   let sliderRef = useRef<any>(null);
-
   const [current, setCurrent] = useState(0);
   const settings = {
     className: "",
@@ -135,11 +134,7 @@ const ZkFeatured = () => {
     // document.body.style.overflow = "hidden";
   }, []);
 
-  const handleWheel = (event: {
-    deltaY: any;
-    preventDefault: () => void;
-    stopPropagation: () => void;
-  }) => {
+  const handleWheel: WheelEventHandler<HTMLDivElement> = (event) => {
     const deltaY = event.deltaY;
 
     if (deltaY > 0) {

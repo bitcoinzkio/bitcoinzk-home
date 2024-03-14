@@ -69,11 +69,7 @@ const Main = () => {
 
   return (
     <div data-aos="fade-up" className=" aos-init aos-animate  ">
-      <div
-        className={
-          "mx-auto w-container px-10 md:w-full md:px-[30px] bg-[url(/IconCloud.svg)] bg-cover object-cover bg-repeat "
-        }
-      >
+      <div className={"mx-auto w-container px-10 md:w-full md:px-[30px]  "}>
         <div className="flex  justify-center pt-[140px] ">
           <div className=" flex flex-col   ">
             <div className="flex items-center gap-5 font-hn">

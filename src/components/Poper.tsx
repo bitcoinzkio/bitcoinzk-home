@@ -83,10 +83,7 @@ function _PoperMenu(p: HTMLAttributes<HTMLDivElement> & PoperMenuProps) {
             )}
           />
 
-          <div
-            data-aos="flip-up"
-            className="py-[.625rem] mo:py-[.375rem] w-full bg-white mt-[.625rem] mo:mt-[.625rem] rounded-2xl z-10 relative"
-          >
+          <div className="py-[.625rem] mo:py-[.375rem] w-full bg-white mt-[.625rem] mo:mt-[.625rem] rounded-2xl z-10 relative">
             {menus.map((item, i) => (
               <Fragment key={`poper_menu_item${i}`}>
                 {item.topSplit && i > 0 && (

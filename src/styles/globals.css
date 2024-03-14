@@ -48,7 +48,7 @@
       transparent 1px,
       transparent 100px
     );
-  background-size: 250px 200px;
+  background-size: 300px 200px;
   opacity: 0.1;
   z-index: -1;
 }
@@ -91,5 +91,13 @@
 .scrollable-content {
   width: 100%;
   overflow-y: auto;
+}
+
+
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: none !important;
 }
 
