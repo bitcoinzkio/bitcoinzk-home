@@ -192,7 +192,7 @@ const ZkFeatured = () => {
                   </div>
                 </div>
                 <div className=" bg-[#000000] w-[60%] font-le text-white diagram-right">
-                  <div className=" flex justify-end flex-wrap  items-center mt-[60px] mr-[60px]  text-sm font-light ">
+                  <div className=" flex justify-end flex-wrap  items-center mt-[60px] mr-[50px]  text-sm font-light ">
                     <div className=" gap-[10px] flex mr-5">
                       <button
                         onClick={onPrev}
@@ -245,7 +245,7 @@ const ZkFeatured = () => {
                   </div>
 
                   <div className=" flex w-full h-full mt-[50px]">
-                    <div className="flex flex-col mx-[80px] md:mx-[50px]  ">
+                    <div className="flex flex-col ml-[80px] mr-[270px] md:mx-[50px]  ">
                       <div className=" flex items-center flex-row ">
                         <Icon name={"expand"} />
                         <span className=" ml-3 font-bold text-[48px] md:text-3xl">

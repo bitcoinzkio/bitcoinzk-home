@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex pt-[21px]  justify-between px-10 z-20 mo:justify-center mo:mx-10 mo:flex-wrap mo:w-full mx-auto w-container md:w-full md:px-[30px]">
+    <div className="flex pt-[21px]  justify-between  z-20 mo:justify-center mo:mx-10 mo:flex-wrap mo:w-full px-[50px] md:w-full md:px-[30px]">
       <div className="justify-start flex">
         <Icon name={"logo"} />
       </div>
@@ -23,8 +23,7 @@ const Header = () => {
             <Icon name={"arrow"} color="white" />
           </button>
         </div>
-        <div className="flex items-center text-lg gap-2 ">
-          <span>Ecosystem</span>
+        <div className="flex items-center gap-2 ">
           <PoperMenu
             containerClassName={"!w-[320px] mo:!right-[-110px]"}
             menus={ecosystemMenus}
@@ -33,6 +32,7 @@ const Header = () => {
             className="absolute z-[9999]"
           >
             <button className="text-[2rem] mo:text-2xl flex flex-row items-center gap-[6px]">
+              <span className=" text-lg ">Ecosystem</span>
               <Icon name={"downArrow"} color="black" />
             </button>
           </PoperMenu>
