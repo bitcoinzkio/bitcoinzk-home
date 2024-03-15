@@ -5,7 +5,7 @@ import Main from "@/components/Main";
 import Road from "@/components/Road";
 import Testnet from "@/components/Testnet";
 import ZkFeatured from "@/components/ZkFeatured";
-// import Swipe from "@/components/swipe";
+import Swipe from "@/components/swipe";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
@@ -41,7 +41,6 @@ export default function Home() {
       </div>
       <ZkFeatured />
       {/* <Swipe /> */}
-
       <Testnet />
       <Featured />
       <Road />
