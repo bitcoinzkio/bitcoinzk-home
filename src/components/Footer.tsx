@@ -1,5 +1,7 @@
 import Icon from "@/images";
 import { bridgeUrl, docUrl, explorerUrl } from "@/utils/constant";
+import { medias } from "./Medias";
+import Link from "next/link";
 
 const Footer = () => {
   const onLink = (url: string) => {
@@ -28,8 +30,7 @@ const Footer = () => {
             </div>
             <div className=" flex gap-[100px] w-[300px] text-sm">
               <div className=" flex flex-col gap-[10px] ">
-                <span>Twitter</span>
-                <span>Discord</span>
+                {medias.map(item => <Link key={item.name} href={item.link} target="_blank">{item.name}</Link>)}
               </div>
               <div className=" flex flex-col gap-[10px]  text-left ">
                 <button className=" text-left" onClick={() => onLink(docUrl)}>

@@ -1,7 +1,13 @@
 import Icon from "@/images";
 import { PoperMenu } from "./Poper";
 import { bridgeUrl, docUrl, ecosystemMenus } from "@/utils/constant";
-import React from "react";
+import React, { ReactNode } from "react";
+import { FaMedium } from "react-icons/fa6"
+import Link from "next/link";
+import { medias } from "./Medias";
+
+
+
 
 const Header = () => {
   const onLink = (link: string) => {
@@ -45,12 +51,12 @@ const Header = () => {
           <Icon name={"arrow"} color="black" />
         </button>
         <div className="flex gap-5">
-          <div>
-            <Icon name={"x"} />
-          </div>
-          <div>
-            <Icon name={"tg"} />
-          </div>
+          {
+            medias.map((item, i) => <Link key={`${item.name}_${i}`} href={item.link} target="_blank"
+              className="text-2xl w-[2.625rem] aspect-square rounded-xl border border-black flex justify-center items-center cursor-pointer">
+              {item.icon}
+            </Link>)
+          }
         </div>
       </div>
     </div>
